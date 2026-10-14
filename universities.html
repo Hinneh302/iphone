@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KNUST Residential Zones & Hostels Guide - HostelHub Kumasi</title>
+  <meta name="description" content="Detailed guide to 40 KNUST hostels across Ayeduase, Kotei, New Site, and Bomso. Proximity to faculties, walking distances to campus gates, and average prices in GH₵." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar Placeholder -->
+  <div id="main-nav-placeholder"></div>
+
+  <!-- Header Banner -->
+  <div style="background: linear-gradient(135deg, rgba(30, 64, 175, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%), #ffffff; border-bottom: 1px solid var(--border-color); padding: 3rem 0 2.5rem;">
+    <div class="container">
+      <div style="max-width: 800px;">
+        <span class="section-tag">KNUST Campus Enclaves  • Kumasi</span>
+        <h1 style="font-size: 2.3rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 0.75rem;">
+          KNUST Student Residential Zones & Distance Guide
+        </h1>
+        <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.6;">
+          Compare 40 verified private hostels across the 4 key residential zones around KNUST: <strong>Ayeduase, Kotei, New Site</strong>, and <strong>Bomso</strong>. Learn about walking distances to lecture halls, gate access, and neighborhood vibes.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Universities / Zones Directory -->
+  <main class="container" style="padding: 3.5rem 1.25rem 5rem;">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;" id="universities-full-list">
+      <!-- Populated dynamically by script -->
+    </div>
+  </main>
+
+  <!-- Ghanaian Student Accommodation Guide Section -->
+  <section class="section" style="background-color: white; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-tag">Student Advisory</span>
+        <h2 class="section-title">Tips for Renting a Hostel in Ghana</h2>
+        <p class="section-desc">Key factors Ghanaian university students should consider before paying booking fees.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number" style="font-size: 1.5rem;">⚡</div>
+          <h3 class="step-title">Standby Generators</h3>
+          <p class="step-desc">
+            With academic revision and online exam submissions, ask if the hostel has an automatic industrial generator that powers individual rooms or just corridor lights during power cuts (dumsor).
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number" style="font-size: 1.5rem;">🚰</div>
+          <h3 class="step-title">Water Security (Polytanks)</h3>
+          <p class="step-desc">
+            Municipal water supply can be erratic in student zones like Ayeduase (Kumasi) and Amamoma (Cape Coast). Confirm the hostel has overhead borehole tanks and pumping machines.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number" style="font-size: 1.5rem;">🛡️</div>
+          <h3 class="step-title">Security & Curfew Rules</h3>
+          <p class="step-desc">
+            Check if the hostel provides 24/7 security porters, CCTV cameras, razor wire, and electric fencing, especially if you return late from Balme or KNUST library study sessions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Placeholder -->
+  <div id="main-footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script type="module">
+    import { setupNavigation, getUniversities, getZones, formatGHS } from './js/app.js';
+
+    setupNavigation('universities');
+
+    const container = document.getElementById('universities-full-list');
+    if (container) {
+      const unis = getUniversities();
+      const knust = unis[0];
+      const zones = getZones();
+
+      let html = '';
+
+      if (knust) {
+        html += `
+          <div class="uni-card" style="display: grid; grid-template-columns: minmax(280px, 340px) 1fr; gap: 2.25rem; padding: 2rem; align-items: center; border-left: 5px solid var(--primary);">
+            <img 
+              src="${knust.image}" 
+              alt="${knust.name}" 
+              style="width: 100%; height: 230px; object-fit: cover; border-radius: var(--radius-md);" 
+              onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80'"
+            />
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <span class="badge badge-primary">${knust.code} Kumasi</span>
+                <span class="badge badge-success">✓ 40 Verified Hostels</span>
+              </div>
+              <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.35rem;">
+                ${knust.name}
+              </h2>
+              <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+                📍 ${knust.location}
+              </div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                ${knust.description}
+              </p>
+              
+              <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; background-color: var(--bg-muted); padding: 0.85rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.25rem;">
+                <div>
+                  <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Hostels Registered</span>
+                  <div style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary);">${knust.hostelsCount} Verified Hostels</div>
+                </div>
+                <div style="border-left: 1px solid var(--border-color); padding-left: 1.5rem;">
+                  <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Average Annual Rate</span>
+                  <div style="font-size: 1.2rem; font-weight: 800; color: var(--primary);">${formatGHS(knust.avgPrice)} / yr</div>
+                </div>
+                <div style="border-left: 1px solid var(--border-color); padding-left: 1.5rem;">
+                  <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Key Zones</span>
+                  <div style="font-size: 0.88rem; font-weight: 700; color: var(--text-secondary);">${knust.popularAreas.join(' • ')}</div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <a href="hostels.html" class="btn btn-primary btn-sm">
+                  View All 40 KNUST Hostels →
+                </a>
+                <a href="contact.html?subject=KNUST%20Hostel%20Inquiry" class="btn btn-outline btn-sm">
+                  Contact Campus Agent
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      html += `<div style="margin-top: 1rem; margin-bottom: 0.5rem;"><h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary);">4 Residential Zones Breakdown</h3></div>`;
+
+      html += zones.map((z, idx) => `
+        <div class="uni-card" style="display: grid; grid-template-columns: minmax(260px, 320px) 1fr; gap: 2rem; padding: 1.75rem; align-items: center;">
+          <img 
+            src="${z.image}" 
+            alt="${z.name} KNUST" 
+            style="width: 100%; height: 210px; object-fit: cover; border-radius: var(--radius-md);" 
+            onerror="this.src='https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80'"
+          />
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+              <span class="badge badge-primary">Zone 0${idx + 1} • ${z.name}</span>
+              <span class="badge badge-success">📍 ${z.tag}</span>
+            </div>
+            <h2 style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.35rem;">
+              ${z.fullName}
+            </h2>
+            <div style="font-size: 0.88rem; color: var(--primary); font-weight: 600; margin-bottom: 0.75rem;">
+              🚶 Walking Distance: ${z.distanceToCampus}
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;">
+              ${z.description}
+            </p>
+            
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; background-color: var(--bg-muted); padding: 0.75rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.25rem;">
+              <div>
+                <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Hostels Listed</span>
+                <div style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary);">${z.hostelsCount} Verified Hostels</div>
+              </div>
+              <div style="border-left: 1px solid var(--border-color); padding-left: 1.5rem;">
+                <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Average Annual Rate</span>
+                <div style="font-size: 1.15rem; font-weight: 800; color: var(--primary);">${formatGHS(z.avgPrice)} / yr</div>
+              </div>
+              <div style="border-left: 1px solid var(--border-color); padding-left: 1.5rem;">
+                <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Popular With</span>
+                <div style="font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);">${z.popularWith}</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="hostels.html?location=${encodeURIComponent(z.name)}" class="btn btn-primary btn-sm">
+                Explore ${z.hostelsCount} Hostels in ${z.name} →
+              </a>
+              <a href="hostels.html?search=${encodeURIComponent(z.name)}" class="btn btn-outline-primary btn-sm">
+                Search ${z.name} Hostels
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      container.innerHTML = html;
+    }
+  </script>
+</body>
+</html>

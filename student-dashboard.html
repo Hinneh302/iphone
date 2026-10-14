@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard - HostelHub Ghana</title>
+  <meta name="description" content="Student portal on HostelHub Ghana. Manage your saved hostels, room requests, and inquiries." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar Placeholder -->
+  <div id="main-nav-placeholder"></div>
+
+  <!-- Dashboard Container -->
+  <div class="dashboard-layout">
+    
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="dash-user-card">
+        <div class="dash-avatar">🎓</div>
+        <div class="dash-user-name current-user-name">Kwame Boateng</div>
+        <div class="dash-user-role current-user-role">STUDENT</div>
+        <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;" class="current-user-uni">University of Ghana</div>
+      </div>
+
+      <nav class="dash-nav">
+        <a href="#saved" class="dash-nav-item active" onclick="switchTab('saved', this)">
+          <span>❤️</span> Saved Hostels
+          <span class="badge badge-primary" id="fav-count-badge" style="margin-left: auto;">0</span>
+        </a>
+        <a href="#bookings" class="dash-nav-item" onclick="switchTab('bookings', this)">
+          <span>📋</span> My Room Requests
+        </a>
+        <a href="#inquiries" class="dash-nav-item" onclick="switchTab('inquiries', this)">
+          <span>💬</span> Sent Inquiries
+        </a>
+        <a href="#profile" class="dash-nav-item" onclick="switchTab('profile', this)">
+          <span>👤</span> Student Profile
+        </a>
+        <a href="hostels.html" class="dash-nav-item" style="color: var(--primary); font-weight: 700; margin-top: 1rem;">
+          <span>🔍</span> Browse More Hostels
+        </a>
+      </nav>
+
+      <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <button class="btn btn-outline btn-sm" onclick="window.logoutUser()" style="width: 100%; color: var(--danger); border-color: #fecaca;">
+          🚪 Log Out
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      
+      <!-- Top Action Bar -->
+      <div class="dash-header-bar">
+        <div>
+          <h1 class="dash-page-title">Welcome back, <span class="current-user-name">Student</span>!</h1>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 2px;">
+            Here is the status of your university accommodation hunt.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="hostels.html" class="btn btn-primary btn-sm">
+            🔍 Find New Hostels
+          </a>
+        </div>
+      </div>
+
+      <!-- Tab 1: Saved Hostels -->
+      <div class="dash-section active" id="tab-saved">
+        <div class="dash-section-header">
+          <h2 class="dash-section-title">Saved Hostels (Favorites)</h2>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Quickly review your top picks</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;" id="student-favorites-container">
+          <!-- Populated by dashboard.js -->
+        </div>
+
+        <!-- Recently Viewed subsection -->
+        <div style="margin-top: 2.5rem; background: white; border-radius: var(--radius-lg); border: 1px solid var(--border-color); padding: 1.5rem;">
+          <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">Recently Viewed Hostels</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Hostels you clicked on during this session.</p>
+          <div id="student-recent-container">
+            <!-- Populated by dashboard.js -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: My Room Requests (Bookings) -->
+      <div class="dash-section" id="tab-bookings" style="display: none;">
+        <div class="dash-section-header">
+          <h2 class="dash-section-title">My Room Booking Requests</h2>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Formal reservations submitted to hostel management</span>
+        </div>
+
+        <div class="dash-table-container">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Hostel & Academic Year</th>
+                <th>Room Type</th>
+                <th>Quoted Price</th>
+                <th>Status</th>
+                <th>Date Submitted</th>
+              </tr>
+            </thead>
+            <tbody id="student-bookings-tbody">
+              <!-- Populated by dashboard.js -->
+            </tbody>
+          </table>
+        </div>
+
+        <div style="background-color: #ecfdf5; border: 1px solid #a7f3d0; border-radius: var(--radius-md); padding: 1rem; margin-top: 1.5rem; font-size: 0.85rem; color: #065f46;">
+          💡 <strong>What happens when approved?</strong> Once the hostel manager approves your room reservation, you will receive a direct notification or WhatsApp message to finalize room allocation and physical key collection on reporting day.
+        </div>
+      </div>
+
+      <!-- Tab 3: Sent Inquiries -->
+      <div class="dash-section" id="tab-inquiries" style="display: none;">
+        <div class="dash-section-header">
+          <h2 class="dash-section-title">Sent Inquiries & Replies</h2>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Questions you sent to hostel owners</span>
+        </div>
+
+        <div class="dash-table-container">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Hostel</th>
+                <th>Room Type</th>
+                <th>Your Question / Owner Reply</th>
+                <th>Status</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="student-inquiries-tbody">
+              <!-- Populated by dashboard.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab 4: Student Profile -->
+      <div class="dash-section" id="tab-profile" style="display: none;">
+        <div class="dash-section-header">
+          <h2 class="dash-section-title">Student Profile Information</h2>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Keep your university and contact details up to date</span>
+        </div>
+
+        <div style="background: white; border-radius: var(--radius-lg); border: 1px solid var(--border-color); padding: 2rem; max-width: 650px;">
+          <form id="student-profile-form">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+              <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input type="text" id="profile-name" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address (Read-only)</label>
+                <input type="email" id="profile-email" class="form-control" readonly />
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+              <div class="form-group">
+                <label class="form-label">Phone (+233)</label>
+                <input type="tel" id="profile-phone" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Current University</label>
+                <select id="profile-university" class="form-control">
+                  <option value="University of Ghana">University of Ghana (UG Legon)</option>
+                  <option value="KNUST">KNUST (Kumasi)</option>
+                  <option value="University of Cape Coast">University of Cape Coast (UCC)</option>
+                  <option value="University of Education, Winneba">University of Education, Winneba (UEW)</option>
+                  <option value="University for Development Studies">University for Development Studies (UDS)</option>
+                  <option value="University of Professional Studies, Accra">UPSA (Accra)</option>
+                  <option value="Accra Technical University">Accra Technical University (ATU)</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.5rem;">
+              <div class="form-group">
+                <label class="form-label">Student ID Number</label>
+                <input type="text" id="profile-student-id" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Academic Level</label>
+                <select id="profile-level" class="form-control">
+                  <option value="Level 100">Level 100</option>
+                  <option value="Level 200">Level 200</option>
+                  <option value="Level 300">Level 300</option>
+                  <option value="Level 400">Level 400</option>
+                  <option value="Postgraduate">Postgraduate</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Save Profile Changes 💾
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Footer Placeholder -->
+  <div id="main-footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script type="module">
+    import { setupNavigation, getCurrentUser } from './js/app.js';
+    import { requireRole, handleLogout } from './js/auth.js';
+    import { initStudentDashboard } from './js/dashboard.js';
+
+    // Verify session
+    requireRole(['student', 'owner', 'admin']);
+
+    setupNavigation('dashboard');
+    initStudentDashboard();
+
+    window.logoutUser = handleLogout;
+
+    window.switchTab = function(tabId, el) {
+      document.querySelectorAll('.dash-nav-item').forEach(item => item.classList.remove('active'));
+      document.querySelectorAll('.dash-section').forEach(sec => sec.style.display = 'none');
+
+      if (el) el.classList.add('active');
+      const target = document.getElementById('tab-' + tabId);
+      if (target) target.style.display = 'block';
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hostel Details - HostelHub Ghana</title>
+  <meta name="description" content="View verified hostel photos, room rates in GH₵, amenities, rules, and contact the hostel owner directly." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar Placeholder -->
+  <div id="main-nav-placeholder"></div>
+
+  <!-- Breadcrumbs and Header -->
+  <header class="details-page-header">
+    <div class="container">
+      <nav class="details-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <a href="hostels.html">Hostels</a>
+        <span>›</span>
+        <span id="detail-breadcrumb-name" style="color: var(--text-primary); font-weight: 600;">Hostel Details</span>
+      </nav>
+
+      <div class="details-title-row">
+        <div>
+          <div id="detail-badge-container" style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <!-- Badges -->
+          </div>
+          <h1 class="details-title" id="detail-hostel-title">
+            Loading Hostel Details...
+          </h1>
+          <div class="details-meta-items">
+            <span id="detail-hostel-uni" style="color: var(--primary); font-weight: 700;">🏛️ University</span>
+            <span id="detail-hostel-location">📍 Location</span>
+            <span id="detail-hostel-distance">🚶 Distance</span>
+            <span class="rating-pill" id="detail-hostel-rating">★ 4.8</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+          <button type="button" class="btn btn-primary btn-sm btn-edit-hostel-details" id="detail-edit-hostel-btn" title="Edit this hostel's name, pictures, and customization (✏️)">
+            ✏️ Edit Hostel Details
+          </button>
+          <button type="button" class="btn-favorite" id="detail-fav-btn" title="Save hostel to favorites">
+            ♥
+          </button>
+          <button type="button" class="btn btn-outline-primary btn-sm" onclick="navigator.clipboard?.writeText(window.location.href); if (window.showToast) { window.showToast('Hostel link copied to clipboard!', 'success'); }">
+            🔗 Share Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Details Content & Booking Grid -->
+  <main class="container" id="details-content-container">
+    
+    <!-- Image Gallery -->
+    <div class="gallery-container">
+      <img 
+        id="detail-main-image" 
+        src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1200&q=80" 
+        alt="Hostel Main Room View" 
+        class="gallery-main-img" 
+      />
+      <div class="gallery-thumbs" id="detail-thumbs-container">
+        <!-- Thumbnails populated by script -->
+      </div>
+    </div>
+
+    <!-- Main Columns -->
+    <div class="details-main-layout">
+      
+      <!-- Left Column: Details, Rooms, Amenities, Rules -->
+      <div class="details-info-column">
+        
+        <!-- About Hostel -->
+        <div class="details-card-block">
+          <h3 class="details-block-title">About This Hostel</h3>
+          <p id="detail-description" style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            Loading description...
+          </p>
+        </div>
+
+        <!-- Room Types & Semester Rates -->
+        <div class="details-card-block">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h3 class="details-block-title" style="margin-bottom: 0;">Room Types & Prices per Academic Year</h3>
+            <span class="badge badge-primary" style="font-size: 0.78rem;">One-in-One to 4-in-a-Room Rates</span>
+          </div>
+          <div class="room-types-list" id="detail-room-types-list">
+            <!-- Populated by script -->
+          </div>
+        </div>
+
+        <!-- Hostel Locations & Branches (Multiple Locations vs None) -->
+        <div class="details-card-block" id="detail-locations-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h3 class="details-block-title" style="margin-bottom: 0;">🏢 Hostel Locations & Branches</h3>
+            <span id="detail-locations-badge" class="badge" style="background:#e0f2fe; color:#0369a1; font-weight:700; font-size:0.75rem;">
+              Checking locations...
+            </span>
+          </div>
+          <div id="detail-locations-content">
+            <!-- Populated by script -->
+          </div>
+        </div>
+
+        <!-- Amenities & Security -->
+        <div class="details-card-block">
+          <h3 class="details-block-title">Facilities & Amenities</h3>
+          <div class="amenities-feature-grid" id="detail-amenities-list">
+            <!-- Populated by script -->
+          </div>
+        </div>
+
+        <!-- Hostel Rules & Conduct -->
+        <div class="details-card-block">
+          <h3 class="details-block-title">Hostel Code of Conduct & Rules</h3>
+          <ul id="detail-rules-list" style="list-style: none; padding-left: 0;">
+            <!-- Populated by script -->
+          </ul>
+        </div>
+
+        <!-- Proximity & Neighborhood Guide -->
+        <div class="details-card-block">
+          <h3 class="details-block-title">Campus Distance & Proximity</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem;">
+            This hostel is conveniently located in the primary student residential belt, within direct reach of faculty blocks, shuttle terminals, night markets, and commercial photocopiers.
+          </p>
+
+          <div style="background-color: var(--bg-muted); border-radius: var(--radius-md); padding: 1.25rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+            <div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">WALKING TIME</div>
+              <div style="font-weight: 700; color: var(--text-primary); margin-top: 2px;">5 - 10 Minutes</div>
+            </div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">CAMPUS SHUTTLE</div>
+              <div style="font-weight: 700; color: var(--secondary); margin-top: 2px;">Available at Main Gate</div>
+            </div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">CANTEEN / PROVISIONS</div>
+              <div style="font-weight: 700; color: var(--text-primary); margin-top: 2px;">On-Site & 50m Nearby</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Sticky Booking & Direct Contact Box -->
+      <aside>
+        <div class="booking-sticky-card">
+          <div class="booking-price-header">
+            <span style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">From</span>
+            <div class="booking-price-amount" id="side-booking-price">GH₵ 6,800</div>
+            <div class="booking-price-period">per student / academic year</div>
+            <div style="margin-top: 0.5rem;" id="side-available-count" class="badge badge-success">
+              8 rooms available
+            </div>
+          </div>
+
+          <!-- Actions Stack -->
+          <div class="booking-actions-stack">
+            <!-- Book / Request Room Modal Trigger -->
+            <button type="button" class="btn btn-primary btn-lg" id="open-booking-modal-btn">
+              Book / Request Room 📝
+            </button>
+
+            <!-- WhatsApp Direct Contact -->
+            <a 
+              href="#" 
+              id="detail-whatsapp-btn" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn btn-whatsapp btn-lg"
+            >
+              💬 Chat on WhatsApp
+            </a>
+
+            <!-- Call Direct -->
+            <a 
+              href="#" 
+              id="detail-call-btn" 
+              class="btn btn-call"
+            >
+              📞 Call Owner Directly
+            </a>
+
+            <!-- Inquiry Modal Trigger -->
+            <button type="button" class="btn btn-outline" id="open-inquiry-modal-btn">
+              ✉️ Send Written Inquiry
+            </button>
+
+            <!-- Edit Hostel Customization Button -->
+            <button type="button" class="btn btn-outline-primary btn-edit-hostel-details" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-weight: 600;">
+              ✏️ Edit Name, Photos & Rates
+            </button>
+          </div>
+
+          <!-- Verified Owner Info Box -->
+          <div class="owner-contact-box">
+            <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; margin-bottom: 0.4rem;">
+              Hostel Administrator
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <div style="width: 42px; height: 42px; border-radius: 9999px; background-color: var(--primary-light); color: var(--primary); font-weight: 700; display: flex; align-items: center; justify-content: center;">
+                👤
+              </div>
+              <div>
+                <strong id="side-owner-name" style="font-size: 0.95rem;">Hostel Manager</strong>
+                <div style="font-size: 0.82rem; color: var(--secondary); font-weight: 600;">✓ Verified Ghana Property</div>
+                <a href="#" id="side-owner-phone" style="font-size: 0.85rem; color: var(--primary); font-weight: 600;">+233 24 000 0000</a>
+              </div>
+            </div>
+
+            <div style="background-color: #f8fafc; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 0.75rem; margin-top: 1rem; font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5;">
+              🛡️ <strong>Safety Advisory:</strong> Never transfer unverified deposits to personal mobile money accounts before inspecting the hostel premises in person or receiving official documentation.
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- Similar Hostels Section -->
+    <section class="section" style="padding-top: 2rem; border-top: 1px solid var(--border-color);">
+      <div class="section-header">
+        <div>
+          <span class="section-tag">Explore More Options</span>
+          <h2 class="section-title" style="font-size: 1.75rem;">Similar Hostels Near This Campus</h2>
+        </div>
+        <a href="hostels.html" class="btn btn-outline-primary btn-sm">See All Hostels →</a>
+      </div>
+
+      <div class="hostels-grid" id="similar-hostels-grid">
+        <!-- Rendered by hostels.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       Modal 1: Send Inquiry to Owner
+       ========================================================================= -->
+  <div class="modal-overlay" id="inquiry-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Send Inquiry to Owner</h3>
+        <button type="button" class="modal-close-btn" id="close-inquiry-modal">&times;</button>
+      </div>
+      <form id="inquiry-form">
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label">Your Full Name</label>
+          <input type="text" id="inquiry-name" class="form-control" required />
+        </div>
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label">Email Address</label>
+          <input type="email" id="inquiry-email" class="form-control" required />
+        </div>
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label">Ghanaian Phone / WhatsApp (+233)</label>
+          <input type="tel" id="inquiry-phone" class="form-control" placeholder="+233 24 123 4567" required />
+        </div>
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label">Room Type of Interest</label>
+          <select id="inquiry-room-type" class="form-control">
+            <option value="1 in a room">1 in a room (Single)</option>
+            <option value="2 in a room">2 in a room</option>
+            <option value="3 in a room">3 in a room</option>
+            <option value="4 in a room">4 in a room</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label class="form-label">Your Message or Question</label>
+          <textarea id="inquiry-message" class="form-control" rows="4" placeholder="e.g. Hello, is there a room available on the 1st floor? Can I come for an inspection tomorrow at 2 PM?" required></textarea>
+        </div>
+        <div style="display: flex; gap: 0.75rem; justify-content: flex-end;">
+          <button type="button" class="btn btn-outline" onclick="document.getElementById('inquiry-modal').classList.remove('active')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Send Message 🚀</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       Modal 2: Book / Request Room
+       ========================================================================= -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Request Room Reservation</h3>
+        <button type="button" class="modal-close-btn" id="close-booking-modal">&times;</button>
+      </div>
+      <form id="booking-form">
+        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+          Submit your official room reservation request to the hostel administration. The owner will review your details and confirm allocation.
+        </p>
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label">Full Name</label>
+          <input type="text" id="booking-name" class="form-control" required />
+        </div>
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label">Email Address</label>
+          <input type="email" id="booking-email" class="form-control" required />
+        </div>
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label">Phone Number (+233)</label>
+          <input type="tel" id="booking-phone" class="form-control" placeholder="+233 24 123 4567" required />
+        </div>
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label">Choose Room Type & Rate</label>
+          <select id="booking-room-type" class="form-control" required>
+            <!-- Options populated dynamically -->
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label">Academic Year</label>
+          <input type="text" id="booking-academic-year" class="form-control" value="2026 / 2027 Academic Year" readonly />
+        </div>
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label class="form-label">Special Requests or Roommate Preferences</label>
+          <textarea id="booking-notes" class="form-control" rows="3" placeholder="e.g. Prefer quiet upper floor, or requesting to pair with student John Doe."></textarea>
+        </div>
+        <div style="display: flex; gap: 0.75rem; justify-content: flex-end;">
+          <button type="button" class="btn btn-outline" onclick="document.getElementById('booking-modal').classList.remove('active')">Cancel</button>
+          <button type="submit" class="btn btn-secondary">Submit Reservation 📋</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Placeholder -->
+  <div id="main-footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script type="module">
+    import { setupNavigation } from './js/app.js';
+    import { initHostelDetailsPage } from './js/hostels.js';
+
+    setupNavigation('hostels');
+    initHostelDetailsPage();
+  </script>
+</body>
+</html>

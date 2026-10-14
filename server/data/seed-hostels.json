@@ -1,0 +1,1914 @@
+[
+  {
+    "id": "knust-01",
+    "name": "Brunei Complex (Hall 7)",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Ayeduase",
+    "location": "Ayeduase Gate, KNUST, Kumasi",
+    "city": "Kumasi",
+    "price": 4800,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "3 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 9500,
+      "2 in a room": 5800,
+      "3 in a room": 4800,
+      "4 in a room": 3800
+    },
+    "distance": "0.3 km from Ayeduase Gate (4 mins walk to CCB)",
+    "rating": 4.8,
+    "reviewsCount": 224,
+    "availableRooms": 12,
+    "totalRooms": 180,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "WiFi",
+      "Standby Generator",
+      "Water Tank",
+      "24/7 Security",
+      "Study Room",
+      "Balcony",
+      "Laundry Bay"
+    ],
+    "description": "The premier hostel landmark right by KNUST Ayeduase Gate. Unequaled convenience for College of Science, Engineering, and Pharmacy students. Features industrial standby power, 24-hour pumped borehole water, biometric turnstiles, and study libraries.",
+    "rules": [
+      "No loud music after 10:00 PM during exam periods",
+      "Visitors must check in at the reception desk",
+      "Cooking permitted in designated kitchenettes"
+    ],
+    "ownerName": "Alhaji Baba Yakubu",
+    "ownerPhone": "+233 24 333 4455",
+    "ownerWhatsapp": "233243334455",
+    "ownerEmail": "bruneicomplex.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": "knust-02",
+    "name": "Franco Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Ayeduase",
+    "location": "Ayeduase Commercial Street, Kumasi",
+    "city": "Kumasi",
+    "price": 5200,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 9800,
+      "2 in a room": 6000,
+      "3 in a room": 5200
+    },
+    "distance": "0.5 km from Ayeduase Gate (6 mins walk)",
+    "rating": 4.7,
+    "reviewsCount": 168,
+    "availableRooms": 8,
+    "totalRooms": 120,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "WiFi",
+      "Standby Generator",
+      "Water Tank",
+      "24/7 Security",
+      "Cafeteria",
+      "Balcony"
+    ],
+    "description": "Franco Hostel is celebrated among KNUST students for spotless maintenance, tiled rooms, self-contained washrooms, and continuous backup generator power during lights out.",
+    "rules": [
+      "Gate closed at 11:30 PM for student safety",
+      "Electrical appliances over 1500W require permission",
+      "Maintain cleanliness in common corridors"
+    ],
+    "ownerName": "Mr. Francis K. Mensah",
+    "ownerPhone": "+233 24 512 8844",
+    "ownerWhatsapp": "233245128844",
+    "ownerEmail": "francohostel.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": "knust-03",
+    "name": "Standard Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Ayeduase",
+    "location": "Ayeduase Main Road, Kumasi",
+    "city": "Kumasi",
+    "price": 4600,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5400,
+      "3 in a room": 4600,
+      "4 in a room": 3600
+    },
+    "distance": "0.6 km from Campus Gate (7 mins walk)",
+    "rating": 4.5,
+    "reviewsCount": 110,
+    "availableRooms": 15,
+    "totalRooms": 95,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "WiFi",
+      "Water Tank",
+      "24/7 Security",
+      "Study Room",
+      "Mini Mart"
+    ],
+    "description": "Reliable, high-capacity student hostel on Ayeduase Main Road. On-site grocery convenience shop, high-yield borehole water tanks, and supportive hostel wardens.",
+    "rules": [
+      "Visitors check out by 10:00 PM",
+      "Quiet study hours observed after 10:00 PM"
+    ],
+    "ownerName": "Mr. Kwadwo Boakye",
+    "ownerPhone": "+233 20 882 1199",
+    "ownerWhatsapp": "233208821199",
+    "ownerEmail": "standardhostel.ayeduase@gmail.com",
+    "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-04",
+    "name": "Canam Hall",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Ayeduase",
+    "location": "Ayeduase Near Apostolic Church, Kumasi",
+    "city": "Kumasi",
+    "price": 5500,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 10500,
+      "2 in a room": 6200,
+      "3 in a room": 5500
+    },
+    "distance": "0.4 km from Ayeduase Gate (5 mins walk)",
+    "rating": 4.7,
+    "reviewsCount": 135,
+    "availableRooms": 6,
+    "totalRooms": 85,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "Air Conditioning",
+      "Standby Generator",
+      "WiFi",
+      "24/7 Security",
+      "Laundry Bay"
+    ],
+    "description": "Modern student residence with air conditioning options, automatic generator switchover, and individual bedroom balconies. Only 5 minutes walk to KNUST lecture halls.",
+    "rules": [
+      "No smoking on premises",
+      "Lock main entry after 11:00 PM"
+    ],
+    "ownerName": "Madam Gladys Osei",
+    "ownerPhone": "+233 55 442 3311",
+    "ownerWhatsapp": "233554423311",
+    "ownerEmail": "canamhall.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-05",
+    "name": "Pinamang Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Ayeduase",
+    "location": "Ayeduase Town Center, Kumasi",
+    "city": "Kumasi",
+    "price": 4900,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 8900,
+      "2 in a room": 5500,
+      "4 in a room": 3800
+    },
+    "distance": "0.7 km from KNUST Gate (8 mins walk)",
+    "rating": 4.6,
+    "reviewsCount": 94,
+    "availableRooms": 10,
+    "totalRooms": 70,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "WiFi",
+      "Water Tank",
+      "24/7 Security",
+      "Study Room",
+      "Balcony"
+    ],
+    "description": "Popular for clean environment, spacious corridors, and reliable borehole storage. Within easy reach of Ayeduase market and campus transport.",
+    "rules": [
+      "Overnight visitors require prior notification",
+      "Conserve water and power"
+    ],
+    "ownerName": "Nana Kwame Pinamang",
+    "ownerPhone": "+233 24 991 2233",
+    "ownerWhatsapp": "233249912233",
+    "ownerEmail": "pinamang.hostel@gmail.com",
+    "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-06",
+    "name": "Beacon Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Ayeduase",
+    "location": "Ayeduase Central, Kumasi",
+    "city": "Kumasi",
+    "price": 5000,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5800,
+      "3 in a room": 5000
+    },
+    "distance": "0.5 km from Ayeduase Gate (6 mins walk)",
+    "rating": 4.6,
+    "reviewsCount": 88,
+    "availableRooms": 7,
+    "totalRooms": 65,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Standby Generator",
+      "Water Tank",
+      "WiFi",
+      "24/7 Security",
+      "Balcony"
+    ],
+    "description": "Solid security, constant power with automatic plant backup, and strong internet. Ideal for students who want quiet study time.",
+    "rules": [
+      "Sign in visitors at front desk",
+      "Curfew 11:00 PM"
+    ],
+    "ownerName": "Mr. Eric Frimpong",
+    "ownerPhone": "+233 50 119 4488",
+    "ownerWhatsapp": "233501194488",
+    "ownerEmail": "beaconhostel.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-07",
+    "name": "Shepherd Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Ayeduase",
+    "location": "Behind Ayeduase Palace, Kumasi",
+    "city": "Kumasi",
+    "price": 4400,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5000,
+      "3 in a room": 4400,
+      "4 in a room": 3500
+    },
+    "distance": "0.8 km from Campus (9 mins walk)",
+    "rating": 4.4,
+    "reviewsCount": 76,
+    "availableRooms": 14,
+    "totalRooms": 80,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Water Tank",
+      "WiFi",
+      "24/7 Security",
+      "Study Room",
+      "Kitchenette"
+    ],
+    "description": "Affordable student lodging in a serene neighborhood behind the chief's palace. Great water security with multiple high-capacity polytanks.",
+    "rules": [
+      "Keep kitchens clean after preparing meals",
+      "No loud musical speakers"
+    ],
+    "ownerName": "Elder Samuel Darko",
+    "ownerPhone": "+233 24 332 9900",
+    "ownerWhatsapp": "233243329900",
+    "ownerEmail": "shepherdhostel.ayeduase@gmail.com",
+    "image": "https://images.unsplash.com/photo-1540518614846-7ede433c4ef2?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540518614846-7ede433c4ef2?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-08",
+    "name": "Frontline Hall (Ayeduase)",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Ayeduase",
+    "location": "Ayeduase Junction, Kumasi",
+    "city": "Kumasi",
+    "price": 5600,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 10800,
+      "2 in a room": 6400,
+      "3 in a room": 5600
+    },
+    "distance": "0.4 km from KNUST Gate (5 mins walk)",
+    "rating": 4.8,
+    "reviewsCount": 152,
+    "availableRooms": 5,
+    "totalRooms": 90,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "Standby Generator",
+      "Air Conditioning",
+      "WiFi",
+      "24/7 Security",
+      "Cafeteria",
+      "Balcony"
+    ],
+    "description": "Premium Ayeduase residence operated under the Frontline brand. Equipped with standby generator, restaurant, and clean executive rooms.",
+    "rules": [
+      "Resident ID required at entrance",
+      "Quiet hours after 10:30 PM"
+    ],
+    "ownerName": "Dr. Kwabena Adjei",
+    "ownerPhone": "+233 50 123 4567",
+    "ownerWhatsapp": "233501234567",
+    "ownerEmail": "info@frontlinehostels.gh",
+    "image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-09",
+    "name": "Orange Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Ayeduase",
+    "location": "Ayeduase South, Kumasi",
+    "city": "Kumasi",
+    "price": 4500,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5200,
+      "4 in a room": 3600
+    },
+    "distance": "0.7 km from Gate (8 mins walk)",
+    "rating": 4.4,
+    "reviewsCount": 65,
+    "availableRooms": 11,
+    "totalRooms": 60,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "WiFi",
+      "Water Tank",
+      "24/7 Security",
+      "Study Room"
+    ],
+    "description": "Recognizable by its orange architectural exterior. Popular among undergraduate students looking for affordable room sharing.",
+    "rules": [
+      "No smoking in rooms",
+      "Compound gates locked at 11:00 PM"
+    ],
+    "ownerName": "Auntie Yaa Serwaa",
+    "ownerPhone": "+233 26 441 5566",
+    "ownerWhatsapp": "233264415566",
+    "ownerEmail": "orangehostel.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-10",
+    "name": "Shalom Hostel Ayeduase",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Ayeduase",
+    "location": "Ayeduase School Junction, Kumasi",
+    "city": "Kumasi",
+    "price": 4200,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 4800,
+      "3 in a room": 4200,
+      "4 in a room": 3200
+    },
+    "distance": "0.9 km from Campus (10 mins walk)",
+    "rating": 4.3,
+    "reviewsCount": 82,
+    "availableRooms": 16,
+    "totalRooms": 75,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Water Tank",
+      "24/7 Security",
+      "WiFi",
+      "Study Hall"
+    ],
+    "description": "Peaceful atmosphere with clean self-contained rooms, friendly hostel management, and steady borehole water supply.",
+    "rules": [
+      "Visitors out by 9:30 PM",
+      "Observe compound cleanliness"
+    ],
+    "ownerName": "Pastor Matthew Appiah",
+    "ownerPhone": "+233 24 776 5544",
+    "ownerWhatsapp": "233247765544",
+    "ownerEmail": "shalom.ayeduase@gmail.com",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-11",
+    "name": "Frontline Executive Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Kotei",
+    "location": "Kotei Road, Kumasi",
+    "city": "Kumasi",
+    "price": 6200,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 11500,
+      "2 in a room": 6200
+    },
+    "distance": "1.0 km from KNUST (Free Hourly Campus Shuttle)",
+    "rating": 4.9,
+    "reviewsCount": 205,
+    "availableRooms": 4,
+    "totalRooms": 80,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Standby Generator",
+      "WiFi",
+      "Shuttle Service",
+      "Air Conditioning",
+      "24/7 Security",
+      "DSTV Lounge"
+    ],
+    "description": "The gold standard of luxury student living in Kumasi. Resort swimming pool, equipped fitness center, air conditioning, and dedicated private shuttles directly to CCB and Commercial Area.",
+    "rules": [
+      "Pool hours: 8:00 AM to 7:00 PM with lifeguard on duty",
+      "Gym reserved exclusively for registered residents",
+      "Curfew strictly monitored via keycard"
+    ],
+    "ownerName": "Dr. Kwabena Adjei",
+    "ownerPhone": "+233 50 123 4567",
+    "ownerWhatsapp": "233501234567",
+    "ownerEmail": "info@frontlinehostels.gh",
+    "image": "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": "knust-12",
+    "name": "Gaza Hostel (Kotei)",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Kotei",
+    "location": "Kotei Town Center, Kumasi",
+    "city": "Kumasi",
+    "price": 4800,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "3 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 9200,
+      "2 in a room": 5600,
+      "3 in a room": 4800,
+      "4 in a room": 3600
+    },
+    "distance": "1.2 km from KNUST (Hostel Shuttle Included)",
+    "rating": 4.7,
+    "reviewsCount": 184,
+    "availableRooms": 9,
+    "totalRooms": 140,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "Standby Generator",
+      "WiFi",
+      "Water Tank",
+      "Study Room",
+      "Shuttle Service",
+      "24/7 Security",
+      "DSTV Lounge"
+    ],
+    "description": "Legendary student hub in Kotei. High student energy, constant electrical backup, well-maintained sanitary facilities, and dependable shuttle service to KNUST campus.",
+    "rules": [
+      "Visitors check out at 10:30 PM",
+      "No open fires or coals inside rooms"
+    ],
+    "ownerName": "Mr. Ebenezer Osei",
+    "ownerPhone": "+233 24 661 7722",
+    "ownerWhatsapp": "233246617722",
+    "ownerEmail": "gazahostel.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-13",
+    "name": "Providence Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Kotei",
+    "location": "Kotei Royal Area, Kumasi",
+    "city": "Kumasi",
+    "price": 5400,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 9800,
+      "2 in a room": 6000,
+      "3 in a room": 5400
+    },
+    "distance": "1.1 km from KNUST Gate (Shuttle Service)",
+    "rating": 4.7,
+    "reviewsCount": 115,
+    "availableRooms": 7,
+    "totalRooms": 85,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "WiFi",
+      "Standby Generator",
+      "24/7 Security",
+      "Water Tank",
+      "Study Room",
+      "Shuttle Service"
+    ],
+    "description": "Modern architecture, serene ambiance, and heavy-duty automatic generator. Regular shuttle service carries students to morning 8 AM lectures.",
+    "rules": [
+      "No unauthorized modifications to electrical sockets",
+      "Security check at entrance"
+    ],
+    "ownerName": "Mrs. Beatrice Kusi",
+    "ownerPhone": "+233 20 443 1188",
+    "ownerWhatsapp": "233204431188",
+    "ownerEmail": "providence.kotei@gmail.com",
+    "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-14",
+    "name": "Splendor Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Kotei",
+    "location": "Kotei High Street, Kumasi",
+    "city": "Kumasi",
+    "price": 5100,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5800,
+      "3 in a room": 5100
+    },
+    "distance": "1.3 km from Campus (Dedicated Shuttle)",
+    "rating": 4.6,
+    "reviewsCount": 92,
+    "availableRooms": 8,
+    "totalRooms": 75,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Shuttle Service",
+      "Standby Generator",
+      "WiFi",
+      "Water Tank",
+      "24/7 Security"
+    ],
+    "description": "Splendor offers magnificent student rooms with porcelain tiles, modern ceiling fans, dedicated shuttle buses, and high-speed fiber internet.",
+    "rules": [
+      "Register visitors with the security officer",
+      "Quiet hours after 10:00 PM"
+    ],
+    "ownerName": "Ing. Kwame Antwi",
+    "ownerPhone": "+233 54 221 3344",
+    "ownerWhatsapp": "233542213344",
+    "ownerEmail": "splendorhostel.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-15",
+    "name": "Millennium Hostel (Kotei)",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Kotei",
+    "location": "Near Kotei Palace, Kumasi",
+    "city": "Kumasi",
+    "price": 4600,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5200,
+      "3 in a room": 4600,
+      "4 in a room": 3600
+    },
+    "distance": "1.4 km from Campus",
+    "rating": 4.4,
+    "reviewsCount": 78,
+    "availableRooms": 12,
+    "totalRooms": 90,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Water Tank",
+      "WiFi",
+      "24/7 Security",
+      "Cafeteria",
+      "Study Hall"
+    ],
+    "description": "One of the pioneering hostels in Kotei with great room sizes and an internal cafeteria serving Ghanaian breakfast and lunch dishes daily.",
+    "rules": [
+      "Curfew at 11:30 PM",
+      "Keep rooms and balconies tidy"
+    ],
+    "ownerName": "Mr. Stephen Oppong",
+    "ownerPhone": "+233 24 883 4455",
+    "ownerWhatsapp": "233248834455",
+    "ownerEmail": "millennium.kotei@gmail.com",
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-16",
+    "name": "Beverly Hills Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Kotei",
+    "location": "Kotei Hills, Kumasi",
+    "city": "Kumasi",
+    "price": 5800,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 10800,
+      "2 in a room": 5800
+    },
+    "distance": "1.2 km from Campus (Free Shuttle)",
+    "rating": 4.8,
+    "reviewsCount": 140,
+    "availableRooms": 6,
+    "totalRooms": 70,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "Air Conditioning",
+      "Standby Generator",
+      "WiFi",
+      "Gym",
+      "24/7 Security",
+      "Balcony",
+      "Shuttle Service"
+    ],
+    "description": "Perched on the breeze-kissed Kotei hills. Scenic views, fully air-conditioned options, fitness gym, and regular shuttle buses straight into KNUST campus.",
+    "rules": [
+      "Gym open to residents only",
+      "No loud pool parties without clearance"
+    ],
+    "ownerName": "Chief Nana Acheampong",
+    "ownerPhone": "+233 50 771 9900",
+    "ownerWhatsapp": "233507719900",
+    "ownerEmail": "beverlyhills.kotei@gmail.com",
+    "image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-17",
+    "name": "Victory Towers Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Kotei",
+    "location": "Kotei Hospital Road, Kumasi",
+    "city": "Kumasi",
+    "price": 4900,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5600,
+      "3 in a room": 4900,
+      "4 in a room": 3700
+    },
+    "distance": "1.0 km from Campus Gate",
+    "rating": 4.5,
+    "reviewsCount": 88,
+    "availableRooms": 10,
+    "totalRooms": 80,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Standby Generator",
+      "Water Tank",
+      "WiFi",
+      "Study Hall",
+      "24/7 Security"
+    ],
+    "description": "Multi-story student housing with backup generator, ample study halls, and clean washroom plumbing. Short walk to the Kotei junction.",
+    "rules": [
+      "Gate closes at 11:00 PM",
+      "No subletting permitted"
+    ],
+    "ownerName": "Mr. Victor Gyasi",
+    "ownerPhone": "+233 24 112 8877",
+    "ownerWhatsapp": "233241128877",
+    "ownerEmail": "victorytowers.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-18",
+    "name": "Masid Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Kotei",
+    "location": "Kotei Last Stop, Kumasi",
+    "city": "Kumasi",
+    "price": 4300,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 4900,
+      "4 in a room": 3300
+    },
+    "distance": "1.5 km from Campus (Hostel Shuttle)",
+    "rating": 4.3,
+    "reviewsCount": 64,
+    "availableRooms": 15,
+    "totalRooms": 65,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Shuttle Service",
+      "Water Tank",
+      "WiFi",
+      "24/7 Security",
+      "Mini Mart"
+    ],
+    "description": "Affordable accommodation in Kotei with dedicated van service to transport students. Mini mart on ground floor for daily provisions.",
+    "rules": [
+      "Respect quiet hours",
+      "Keep shared laundry lines clean"
+    ],
+    "ownerName": "Alhaji Masid Bello",
+    "ownerPhone": "+233 27 554 3322",
+    "ownerWhatsapp": "233275543322",
+    "ownerEmail": "masidhostel.kotei@gmail.com",
+    "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-19",
+    "name": "Hydes Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Kotei",
+    "location": "Kotei East, Kumasi",
+    "city": "Kumasi",
+    "price": 4700,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5300,
+      "3 in a room": 4700
+    },
+    "distance": "1.1 km from Campus",
+    "rating": 4.5,
+    "reviewsCount": 71,
+    "availableRooms": 8,
+    "totalRooms": 60,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Water Tank",
+      "Standby Generator",
+      "WiFi",
+      "24/7 Security",
+      "Balcony"
+    ],
+    "description": "Comfortable self-contained student bedrooms with private balconies and automatic generator switch. Very secure gated environment.",
+    "rules": [
+      "No heavy sound systems",
+      "Visitor registration at gate"
+    ],
+    "ownerName": "Mrs. Faustina Hyde",
+    "ownerPhone": "+233 24 330 1122",
+    "ownerWhatsapp": "233243301122",
+    "ownerEmail": "hydeshostel.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-20",
+    "name": "De-Shalom Hostel (Kotei)",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Kotei",
+    "location": "Kotei New Road, Kumasi",
+    "city": "Kumasi",
+    "price": 4500,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5100,
+      "4 in a room": 3500
+    },
+    "distance": "1.3 km from Campus",
+    "rating": 4.4,
+    "reviewsCount": 68,
+    "availableRooms": 11,
+    "totalRooms": 70,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "WiFi",
+      "Water Tank",
+      "Study Room",
+      "24/7 Security"
+    ],
+    "description": "Clean, budget-conscious student rooms with reliable water tanks and quiet study rooms for revision.",
+    "rules": [
+      "Compound locked at 11:00 PM",
+      "Maintain room hygiene"
+    ],
+    "ownerName": "Pastor John Mensah",
+    "ownerPhone": "+233 55 889 0011",
+    "ownerWhatsapp": "233558890011",
+    "ownerEmail": "deshalom.kotei@gmail.com",
+    "image": "https://images.unsplash.com/photo-1540518614846-7ede433c4ef2?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540518614846-7ede433c4ef2?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-21",
+    "name": "Wagyingo Student Lodge",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "New Site",
+    "location": "Ayeduase New Site, Kumasi",
+    "city": "Kumasi",
+    "price": 4700,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 9000,
+      "2 in a room": 5400,
+      "4 in a room": 3500
+    },
+    "distance": "0.8 km from KNUST Commercial Area (9 mins walk)",
+    "rating": 4.6,
+    "reviewsCount": 122,
+    "availableRooms": 10,
+    "totalRooms": 80,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "WiFi",
+      "Standby Generator",
+      "Water Tank",
+      "24/7 Security",
+      "Mini Mart",
+      "Study Lounge",
+      "Balcony"
+    ],
+    "description": "Situated in the tranquil Ayeduase New Site residential enclave. Tiled self-contained rooms, perimeter electric fencing, and steady borehole water system.",
+    "rules": [
+      "Garbage placed in central bins",
+      "Maintain silence in common study area"
+    ],
+    "ownerName": "Mr. Patrick Asare",
+    "ownerPhone": "+233 24 555 8899",
+    "ownerWhatsapp": "233245558899",
+    "ownerEmail": "wagyingo.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-22",
+    "name": "Whitewood Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "New Site",
+    "location": "New Site Hilltop, Kumasi",
+    "city": "Kumasi",
+    "price": 5500,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 10500,
+      "2 in a room": 6200,
+      "3 in a room": 5500
+    },
+    "distance": "0.9 km from Campus (10 mins walk)",
+    "rating": 4.8,
+    "reviewsCount": 145,
+    "availableRooms": 6,
+    "totalRooms": 75,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "Standby Generator",
+      "Air Conditioning",
+      "WiFi",
+      "Balcony",
+      "24/7 Security",
+      "Study Room"
+    ],
+    "description": "Famous for its crisp white modern facade and serene hilltop atmosphere. Executive self-contained units with private kitchens and standby power.",
+    "rules": [
+      "Strict noise restrictions after 10:00 PM",
+      "AC turned off when exiting room"
+    ],
+    "ownerName": "Ing. Samuel Danquah",
+    "ownerPhone": "+233 20 665 4433",
+    "ownerWhatsapp": "233206654433",
+    "ownerEmail": "whitewood.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-23",
+    "name": "West End Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "New Site",
+    "location": "Ayeduase New Site, Kumasi",
+    "city": "Kumasi",
+    "price": 4900,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5500,
+      "3 in a room": 4900
+    },
+    "distance": "0.85 km from Campus (9 mins walk)",
+    "rating": 4.5,
+    "reviewsCount": 84,
+    "availableRooms": 9,
+    "totalRooms": 70,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Standby Generator",
+      "Water Tank",
+      "WiFi",
+      "24/7 Security",
+      "Laundry Bay"
+    ],
+    "description": "Spacious paved compound with plenty of parking, quiet study corridors, reliable standby generator, and laundry sinks.",
+    "rules": [
+      "Visitors sign out before 10:30 PM",
+      "No dangerous electrical appliances"
+    ],
+    "ownerName": "Mr. Frank Appau",
+    "ownerPhone": "+233 24 887 6655",
+    "ownerWhatsapp": "233248876655",
+    "ownerEmail": "westendhostel.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-24",
+    "name": "Evandi Kumasi (New Site)",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "New Site",
+    "location": "New Site Boulevard, Kumasi",
+    "city": "Kumasi",
+    "price": 5900,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 11000,
+      "2 in a room": 6500,
+      "3 in a room": 5900
+    },
+    "distance": "0.75 km from Campus Gate (8 mins walk)",
+    "rating": 4.8,
+    "reviewsCount": 160,
+    "availableRooms": 5,
+    "totalRooms": 100,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "WiFi",
+      "Standby Generator",
+      "Cafeteria",
+      "Study Hall",
+      "24/7 Security",
+      "Balcony"
+    ],
+    "description": "The Kumasi branch of the renowned Evandi student accommodation. Spotless rooms, standby generator, private bathrooms, and an on-site canteen serving hot Ghanaian meals.",
+    "rules": [
+      "Resident keycard required for entry",
+      "Gate locked at 11:30 PM"
+    ],
+    "ownerName": "Madam Akua Donkor",
+    "ownerPhone": "+233 20 891 2345",
+    "ownerWhatsapp": "233208912345",
+    "ownerEmail": "evandi.kumasi@yahoo.com",
+    "image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-25",
+    "name": "Amandah Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "New Site",
+    "location": "Ayeduase New Site, Kumasi",
+    "city": "Kumasi",
+    "price": 4800,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5400,
+      "4 in a room": 3600
+    },
+    "distance": "0.9 km from Campus",
+    "rating": 4.5,
+    "reviewsCount": 91,
+    "availableRooms": 8,
+    "totalRooms": 65,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Water Tank",
+      "WiFi",
+      "24/7 Security",
+      "Study Room",
+      "Mini Mart"
+    ],
+    "description": "Popular for quiet environment and warm management. Tiled floors throughout, private bathrooms, and consistent running water.",
+    "rules": [
+      "Visitors check in at reception",
+      "Curfew at 11:00 PM"
+    ],
+    "ownerName": "Madam Amanda Owusu",
+    "ownerPhone": "+233 55 332 1199",
+    "ownerWhatsapp": "233553321199",
+    "ownerEmail": "amandahostel.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-26",
+    "name": "City of God Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "New Site",
+    "location": "New Site Extension, Kumasi",
+    "city": "Kumasi",
+    "price": 4400,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5000,
+      "3 in a room": 4400,
+      "4 in a room": 3300
+    },
+    "distance": "1.0 km from Campus",
+    "rating": 4.4,
+    "reviewsCount": 75,
+    "availableRooms": 13,
+    "totalRooms": 70,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Water Tank",
+      "24/7 Security",
+      "WiFi",
+      "Study Hall"
+    ],
+    "description": "Serene student haven away from street traffic. Large communal study hall and great security personnel on duty 24/7.",
+    "rules": [
+      "No loud music in corridors",
+      "Lock security gates at 10:30 PM"
+    ],
+    "ownerName": "Rev. Joseph Boateng",
+    "ownerPhone": "+233 24 771 2244",
+    "ownerWhatsapp": "233247712244",
+    "ownerEmail": "cityofgod.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1540518614846-7ede433c4ef2?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540518614846-7ede433c4ef2?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-27",
+    "name": "The Nest Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "New Site",
+    "location": "New Site View, Kumasi",
+    "city": "Kumasi",
+    "price": 5300,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 10000,
+      "2 in a room": 6000,
+      "3 in a room": 5300
+    },
+    "distance": "0.8 km from Campus (9 mins walk)",
+    "rating": 4.7,
+    "reviewsCount": 110,
+    "availableRooms": 7,
+    "totalRooms": 60,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Air Conditioning",
+      "Standby Generator",
+      "WiFi",
+      "24/7 Security",
+      "Balcony"
+    ],
+    "description": "Chic modern hostel with airy rooms, decorative lighting, standby generator, and private balconies overlooking the New Site greenery.",
+    "rules": [
+      "Observe energy conservation with AC",
+      "Visitors sign in"
+    ],
+    "ownerName": "Mr. Kwaku Twum",
+    "ownerPhone": "+233 50 442 8811",
+    "ownerWhatsapp": "233504428811",
+    "ownerEmail": "thenesthostel.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-28",
+    "name": "Grand Hall Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "New Site",
+    "location": "Ayeduase New Site Main, Kumasi",
+    "city": "Kumasi",
+    "price": 5100,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5800,
+      "3 in a room": 5100
+    },
+    "distance": "0.7 km from Campus Gate (8 mins walk)",
+    "rating": 4.6,
+    "reviewsCount": 96,
+    "availableRooms": 8,
+    "totalRooms": 75,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Standby Generator",
+      "Water Tank",
+      "WiFi",
+      "Cafeteria",
+      "24/7 Security"
+    ],
+    "description": "Spacious rooms with modern bathroom accessories, backup electricity, and clean dining cafeteria right inside the compound.",
+    "rules": [
+      "Visitors leave by 10:00 PM",
+      "Maintain kitchen hygiene"
+    ],
+    "ownerName": "Mr. Daniel Baafi",
+    "ownerPhone": "+233 24 663 1155",
+    "ownerWhatsapp": "233246631155",
+    "ownerEmail": "grandhall.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-29",
+    "name": "Platinum Court",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "New Site",
+    "location": "New Site Green Lane, Kumasi",
+    "city": "Kumasi",
+    "price": 5700,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 10800,
+      "2 in a room": 5700
+    },
+    "distance": "0.85 km from Campus (9 mins walk)",
+    "rating": 4.8,
+    "reviewsCount": 130,
+    "availableRooms": 4,
+    "totalRooms": 55,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "Standby Generator",
+      "WiFi",
+      "DSTV Lounge",
+      "24/7 Security",
+      "Balcony"
+    ],
+    "description": "Executive accommodation tailored for senior and graduate students. Quiet study suites, DSTV common lounge, and high-speed Starlink WiFi.",
+    "rules": [
+      "Residents only in lounge during exam times",
+      "No loud parties"
+    ],
+    "ownerName": "Dr. Charles Sarpong",
+    "ownerPhone": "+233 20 993 4477",
+    "ownerWhatsapp": "233209934477",
+    "ownerEmail": "platinumcourt.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-30",
+    "name": "Royal Grace Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "New Site",
+    "location": "New Site Junction, Kumasi",
+    "city": "Kumasi",
+    "price": 4600,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5200,
+      "4 in a room": 3500
+    },
+    "distance": "0.95 km from Campus",
+    "rating": 4.4,
+    "reviewsCount": 80,
+    "availableRooms": 12,
+    "totalRooms": 65,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Water Tank",
+      "WiFi",
+      "24/7 Security",
+      "Study Room"
+    ],
+    "description": "Affordable room sharing, dependable security personnel, borehole storage, and peaceful surroundings.",
+    "rules": [
+      "Gate closes at 11:00 PM",
+      "No pets allowed"
+    ],
+    "ownerName": "Mrs. Grace Mensah",
+    "ownerPhone": "+233 24 550 3388",
+    "ownerWhatsapp": "233245503388",
+    "ownerEmail": "royalgrace.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-31",
+    "name": "Supertech Hostel (Bomso Gate)",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Bomso",
+    "location": "Bomso Gate, KNUST, Kumasi",
+    "city": "Kumasi",
+    "price": 5600,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 10200,
+      "2 in a room": 5600,
+      "3 in a room": 4600
+    },
+    "distance": "0.3 km from KNUST Bomso Entrance (4 mins walk)",
+    "rating": 4.8,
+    "reviewsCount": 195,
+    "availableRooms": 6,
+    "totalRooms": 110,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "Standby Generator",
+      "WiFi",
+      "Water Tank",
+      "24/7 Security",
+      "Study Room",
+      "Balcony"
+    ],
+    "description": "Perfect location right beside the KNUST Bomso Gate. Prime residence for College of Art and Built Environment (CABE) and College of Humanities and Social Sciences (CoHSS) students. 4 minutes walk to lectures.",
+    "rules": [
+      "ID card required for gate access",
+      "No noise pollution after 10:00 PM",
+      "Non-resident curfew at 10:30 PM"
+    ],
+    "ownerName": "Alhaji Rashid Sulemana",
+    "ownerPhone": "+233 24 445 7788",
+    "ownerWhatsapp": "233244457788",
+    "ownerEmail": "supertech.bomso@gmail.com",
+    "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1540518614846-7ede433c4ef2?auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": "knust-32",
+    "name": "Bomso Paradise Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Bomso",
+    "location": "Bomso Main Road, Kumasi",
+    "city": "Kumasi",
+    "price": 4900,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5500,
+      "3 in a room": 4900,
+      "4 in a room": 3700
+    },
+    "distance": "0.5 km from Bomso Gate (6 mins walk)",
+    "rating": 4.6,
+    "reviewsCount": 132,
+    "availableRooms": 10,
+    "totalRooms": 85,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "Standby Generator",
+      "Water Tank",
+      "WiFi",
+      "24/7 Security",
+      "Cafeteria"
+    ],
+    "description": "Very popular student residence on Bomso Main Road. Tiled rooms with ceiling fans, automatic standby generator during outages, and internal restaurant.",
+    "rules": [
+      "Visitors check out at 10:00 PM",
+      "Bag and dispose trash in bins"
+    ],
+    "ownerName": "Mr. Kwabena Frimpong",
+    "ownerPhone": "+233 20 771 3322",
+    "ownerWhatsapp": "233207713322",
+    "ownerEmail": "bomsoparadise@gmail.com",
+    "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-33",
+    "name": "Sun City Hostel (Bomso)",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Bomso",
+    "location": "Near Bomso Clinic, Kumasi",
+    "city": "Kumasi",
+    "price": 5200,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 9800,
+      "2 in a room": 5900,
+      "3 in a room": 5200
+    },
+    "distance": "0.6 km from Campus (7 mins walk)",
+    "rating": 4.7,
+    "reviewsCount": 118,
+    "availableRooms": 8,
+    "totalRooms": 80,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Standby Generator",
+      "Air Conditioning",
+      "WiFi",
+      "Balcony",
+      "24/7 Security"
+    ],
+    "description": "Sun City provides well-ventilated executive rooms with optional air conditioning, clean bathrooms, and strong backup generator systems.",
+    "rules": [
+      "Curfew at 11:30 PM",
+      "Energy conservation rules apply"
+    ],
+    "ownerName": "Madam Vivian Agyemang",
+    "ownerPhone": "+233 24 338 9911",
+    "ownerWhatsapp": "233243389911",
+    "ownerEmail": "suncity.bomso@gmail.com",
+    "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-34",
+    "name": "Royal Gate Hostel (Bomso)",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Bomso",
+    "location": "Bomso Gate Approach, Kumasi",
+    "city": "Kumasi",
+    "price": 5400,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 10000,
+      "2 in a room": 6100,
+      "3 in a room": 5400
+    },
+    "distance": "0.4 km from Bomso Gate (5 mins walk)",
+    "rating": 4.7,
+    "reviewsCount": 104,
+    "availableRooms": 5,
+    "totalRooms": 75,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "Water Tank",
+      "Standby Generator",
+      "WiFi",
+      "Study Hall",
+      "24/7 Security"
+    ],
+    "description": "Within 5 minutes walk of KNUST Bomso gate. High level of hygiene, continuous generator power during exam periods, and quiet study hall.",
+    "rules": [
+      "Visitors sign in at front gate",
+      "No smoking on hostel premises"
+    ],
+    "ownerName": "Ing. Kofi Mensah",
+    "ownerPhone": "+233 55 220 4455",
+    "ownerWhatsapp": "233552204455",
+    "ownerEmail": "royalgate.bomso@gmail.com",
+    "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-35",
+    "name": "Wisdom Hostel (Bomso)",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Bomso",
+    "location": "Bomso Residential Area, Kumasi",
+    "city": "Kumasi",
+    "price": 4500,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5100,
+      "3 in a room": 4500,
+      "4 in a room": 3400
+    },
+    "distance": "0.7 km from Gate (8 mins walk)",
+    "rating": 4.4,
+    "reviewsCount": 86,
+    "availableRooms": 12,
+    "totalRooms": 70,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "WiFi",
+      "Water Tank",
+      "24/7 Security",
+      "Study Room"
+    ],
+    "description": "Affordable and peaceful accommodation preferred by students studying for professional accounting and law exams.",
+    "rules": [
+      "Quiet hours strictly enforced",
+      "Maintain kitchen cleanliness"
+    ],
+    "ownerName": "Elder David Osei",
+    "ownerPhone": "+233 24 662 9900",
+    "ownerWhatsapp": "233246629900",
+    "ownerEmail": "wisdomhostel.bomso@gmail.com",
+    "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-36",
+    "name": "Genesis Hostel (Bomso)",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Bomso",
+    "location": "Bomso Junction, Kumasi",
+    "city": "Kumasi",
+    "price": 4800,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5400,
+      "4 in a room": 3600
+    },
+    "distance": "0.6 km from Campus (7 mins walk)",
+    "rating": 4.5,
+    "reviewsCount": 92,
+    "availableRooms": 9,
+    "totalRooms": 65,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Standby Generator",
+      "WiFi",
+      "24/7 Security",
+      "Mini Mart"
+    ],
+    "description": "Conveniently located near Bomso Junction. Quick access to taxis, trotros, supermarkets, and walking distance to KNUST campus.",
+    "rules": [
+      "Curfew at 11:00 PM",
+      "No subletting of allocated beds"
+    ],
+    "ownerName": "Mr. Genesis Boateng",
+    "ownerPhone": "+233 20 114 5566",
+    "ownerWhatsapp": "233201145566",
+    "ownerEmail": "genesishostel.bomso@gmail.com",
+    "image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-37",
+    "name": "Oasis Student Palace",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Bomso",
+    "location": "Bomso High Street, Kumasi",
+    "city": "Kumasi",
+    "price": 5800,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 10500,
+      "2 in a room": 5800
+    },
+    "distance": "0.5 km from Bomso Gate (6 mins walk)",
+    "rating": 4.8,
+    "reviewsCount": 124,
+    "availableRooms": 4,
+    "totalRooms": 50,
+    "status": "approved",
+    "featured": true,
+    "amenities": [
+      "Air Conditioning",
+      "Standby Generator",
+      "WiFi",
+      "Gym",
+      "24/7 Security",
+      "Balcony"
+    ],
+    "description": "Boutique student palace featuring fitted gym, air-conditioned executive single rooms, private balconies, and CCTV perimeter surveillance.",
+    "rules": [
+      "Gym reserved for registered hostel residents",
+      "Visitors check out by 10:30 PM"
+    ],
+    "ownerName": "Dr. Anthony Cudjoe",
+    "ownerPhone": "+233 50 882 1100",
+    "ownerWhatsapp": "233508821100",
+    "ownerEmail": "oasispalace.bomso@gmail.com",
+    "image": "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-38",
+    "name": "Crystal Heights Hostel",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Bomso",
+    "location": "Bomso Hill, Kumasi",
+    "city": "Kumasi",
+    "price": 4700,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 5300,
+      "3 in a room": 4700,
+      "4 in a room": 3600
+    },
+    "distance": "0.8 km from Campus",
+    "rating": 4.5,
+    "reviewsCount": 77,
+    "availableRooms": 11,
+    "totalRooms": 65,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Water Tank",
+      "WiFi",
+      "24/7 Security",
+      "Study Room",
+      "Balcony"
+    ],
+    "description": "Quiet and breezy hillside student residence in Bomso. High water reservoir capacity and friendly student community.",
+    "rules": [
+      "Maintain noise discipline after 10:00 PM",
+      "No smoking"
+    ],
+    "ownerName": "Mrs. Evelyn Sasu",
+    "ownerPhone": "+233 24 339 0044",
+    "ownerWhatsapp": "233243390044",
+    "ownerEmail": "crystalheights.knust@gmail.com",
+    "image": "https://images.unsplash.com/photo-1540518614846-7ede433c4ef2?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540518614846-7ede433c4ef2?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-39",
+    "name": "Tech Junction Haven",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Bomso",
+    "location": "Near Tech Junction, Kumasi",
+    "city": "Kumasi",
+    "price": 5100,
+    "period": "per academic year",
+    "roomTypes": [
+      "1 in a room",
+      "2 in a room",
+      "3 in a room"
+    ],
+    "roomPricing": {
+      "1 in a room": 9600,
+      "2 in a room": 5800,
+      "3 in a room": 5100
+    },
+    "distance": "0.75 km from Tech Junction / Campus",
+    "rating": 4.6,
+    "reviewsCount": 110,
+    "availableRooms": 7,
+    "totalRooms": 70,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Standby Generator",
+      "WiFi",
+      "Water Tank",
+      "24/7 Security"
+    ],
+    "description": "Conveniently situated near Tech Junction for seamless transit to Kumasi Central, Adum, and KNUST main entrance. Standby generator and constant borehole water.",
+    "rules": [
+      "Gate closes at 11:30 PM",
+      "Visitors must register with porter"
+    ],
+    "ownerName": "Mr. Kwaku Asamoah",
+    "ownerPhone": "+233 20 558 7722",
+    "ownerWhatsapp": "233205587722",
+    "ownerEmail": "techhaven.bomso@gmail.com",
+    "image": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    "id": "knust-40",
+    "name": "St. Theresa's Hostel (Bomso)",
+    "university": "KNUST",
+    "uniCode": "KNUST",
+    "zone": "Bomso",
+    "location": "Bomso Catholic Church Lane, Kumasi",
+    "city": "Kumasi",
+    "price": 4300,
+    "period": "per academic year",
+    "roomTypes": [
+      "2 in a room",
+      "3 in a room",
+      "4 in a room"
+    ],
+    "roomPricing": {
+      "2 in a room": 4900,
+      "3 in a room": 4300,
+      "4 in a room": 3300
+    },
+    "distance": "0.8 km from Gate (9 mins walk)",
+    "rating": 4.4,
+    "reviewsCount": 62,
+    "availableRooms": 14,
+    "totalRooms": 60,
+    "status": "approved",
+    "featured": false,
+    "amenities": [
+      "Water Tank",
+      "24/7 Security",
+      "WiFi",
+      "Study Lounge"
+    ],
+    "description": "Peaceful and disciplined student lodge located in quiet church lane. Clean tiled rooms, high water storage, and calm revision environment.",
+    "rules": [
+      "No loud music permitted",
+      "Compound locked at 10:30 PM"
+    ],
+    "ownerName": "Madam Theresa Konadu",
+    "ownerPhone": "+233 24 779 1133",
+    "ownerWhatsapp": "233247791133",
+    "ownerEmail": "sttheresa.bomso@gmail.com",
+    "image": "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?auto=format&fit=crop&w=1200&q=80"
+    ]
+  }
+]

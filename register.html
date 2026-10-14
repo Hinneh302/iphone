@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - HostelHub Ghana</title>
+  <meta name="description" content="Create a student or hostel owner account on HostelHub Ghana to search or list university accommodations." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body style="background-color: #f1f5f9; min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Simple Header -->
+  <header class="auth-header">
+    <div class="container auth-header-container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-badge">H</span>
+        <span>Hostel<span style="color: var(--secondary);">Hub</span></span>
+        <span class="brand-tagline">Ghana</span>
+      </a>
+      <a href="login.html" class="btn btn-outline btn-sm">Already have an account? Sign In</a>
+    </div>
+  </header>
+
+  <!-- Register Main -->
+  <main style="flex-grow: 1; display: flex; align-items: center; justify-content: center; padding: 3rem 1.25rem;">
+    <div style="background-color: white; border-radius: var(--radius-xl); border: 1px solid var(--border-color); width: 100%; max-width: 540px; padding: 2.5rem; box-shadow: var(--shadow-lg);">
+      
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="badge badge-success" style="margin-bottom: 0.5rem;">Join HostelHub Ghana</span>
+        <h1 style="font-size: 1.75rem; font-weight: 800; color: var(--text-primary);">Create Your Account</h1>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.35rem;">
+          Select your role to get started with verified university accommodations.
+        </p>
+      </div>
+
+      <!-- Role Selector Tabs -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.75rem;">
+        <button 
+          type="button" 
+          id="btn-role-student" 
+          class="btn btn-primary" 
+          onclick="selectRegisterRole('student')"
+        >
+          🎓 I am a Student
+        </button>
+        <button 
+          type="button" 
+          id="btn-role-owner" 
+          class="btn btn-outline" 
+          onclick="selectRegisterRole('owner')"
+        >
+          🏢 I am a Hostel Owner
+        </button>
+      </div>
+
+      <!-- Form -->
+      <form id="register-form" onsubmit="submitRegister(event)">
+        <input type="hidden" id="reg-role" value="student" />
+
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <label class="form-label" for="reg-name">Full Name *</label>
+          <input type="text" id="reg-name" class="form-control" placeholder="e.g. Kwame Boateng" required />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+          <div class="form-group">
+            <label class="form-label" for="reg-email">Email Address *</label>
+            <input type="email" id="reg-email" class="form-control" placeholder="e.g. k.boateng@st.ug.edu.gh" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-phone">Phone (+233) *</label>
+            <input type="tel" id="reg-phone" class="form-control" placeholder="+233 24 123 4567" required />
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <label class="form-label" for="reg-uni">University / Institution *</label>
+          <select id="reg-uni" class="form-control" required>
+            <option value="University of Ghana">University of Ghana (UG Legon)</option>
+            <option value="KNUST">KNUST (Kumasi)</option>
+            <option value="University of Cape Coast">University of Cape Coast (UCC)</option>
+            <option value="University of Education, Winneba">University of Education, Winneba (UEW)</option>
+            <option value="University for Development Studies">University for Development Studies (UDS)</option>
+            <option value="University of Professional Studies, Accra">UPSA (Madina, Accra)</option>
+            <option value="Accra Technical University">Accra Technical University (ATU)</option>
+          </select>
+        </div>
+
+        <!-- Student-specific fields -->
+        <div id="student-extra-fields" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+          <div class="form-group">
+            <label class="form-label" for="reg-student-id">Student ID Index</label>
+            <input type="text" id="reg-student-id" class="form-control" placeholder="e.g. 10982344" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-level">Academic Level</label>
+            <select id="reg-level" class="form-control">
+              <option value="Level 100">Level 100 (Freshman)</option>
+              <option value="Level 200">Level 200</option>
+              <option value="Level 300">Level 300</option>
+              <option value="Level 400">Level 400 (Finalist)</option>
+              <option value="Postgraduate">Postgraduate</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Owner-specific fields -->
+        <div id="owner-extra-fields" style="display: none; margin-bottom: 1.25rem;">
+          <div class="form-group">
+            <label class="form-label" for="reg-business-name">Business / Hostel Property Name</label>
+            <input type="text" id="reg-business-name" class="form-control" placeholder="e.g. Prestige Accommodations Ltd" />
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+          <div class="form-group">
+            <label class="form-label" for="reg-password">Password *</label>
+            <input type="password" id="reg-password" class="form-control" placeholder="Min. 6 characters" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-confirm-password">Confirm Password *</label>
+            <input type="password" id="reg-confirm-password" class="form-control" placeholder="Repeat password" required />
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label class="checkbox-label" style="font-size: 0.85rem;">
+            <input type="checkbox" required />
+            <span>I agree to HostelHub's Code of Conduct and Student Safety Terms</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-secondary btn-lg" style="width: 100%;">
+          Create Account 🚀
+        </button>
+      </form>
+
+      <div style="text-align: center; margin-top: 1.75rem; font-size: 0.9rem; color: var(--text-secondary);">
+        Already registered? <a href="login.html" style="color: var(--primary); font-weight: 700;">Sign In</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module">
+    import { handleRegister } from './js/auth.js';
+    import { showToast } from './js/app.js';
+
+    window.selectRegisterRole = function(role) {
+      document.getElementById('reg-role').value = role;
+      const studentBtn = document.getElementById('btn-role-student');
+      const ownerBtn = document.getElementById('btn-role-owner');
+      const studentExtra = document.getElementById('student-extra-fields');
+      const ownerExtra = document.getElementById('owner-extra-fields');
+
+      if (role === 'owner') {
+        ownerBtn.className = 'btn btn-primary';
+        studentBtn.className = 'btn btn-outline';
+        studentExtra.style.display = 'none';
+        ownerExtra.style.display = 'block';
+      } else {
+        studentBtn.className = 'btn btn-primary';
+        ownerBtn.className = 'btn btn-outline';
+        studentExtra.style.display = 'grid';
+        ownerExtra.style.display = 'none';
+      }
+    };
+
+    window.submitRegister = function(e) {
+      e.preventDefault();
+      const role = document.getElementById('reg-role').value;
+      const name = document.getElementById('reg-name').value;
+      const email = document.getElementById('reg-email').value;
+      const phone = document.getElementById('reg-phone').value;
+      const uni = document.getElementById('reg-uni').value;
+      const pass = document.getElementById('reg-password').value;
+      const confirmPass = document.getElementById('reg-confirm-password').value;
+
+      if (pass !== confirmPass) {
+        showToast("Passwords do not match. Please re-check.", "error");
+        return;
+      }
+
+      handleRegister({
+        name,
+        email,
+        phone,
+        university: uni,
+        password: pass,
+        role: role,
+        studentId: document.getElementById('reg-student-id')?.value,
+        level: document.getElementById('reg-level')?.value,
+        businessName: document.getElementById('reg-business-name')?.value
+      });
+    };
+  </script>
+</body>
+</html>

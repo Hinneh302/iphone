@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact HostelHub Ghana - Student Support & Inquiries</title>
+  <meta name="description" content="Get in touch with HostelHub Ghana. Reach our student support desk, report fraudulent listings, or list your hostel." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar Placeholder -->
+  <div id="main-nav-placeholder"></div>
+
+  <!-- Contact Header -->
+  <div style="background: linear-gradient(180deg, #ffffff 0%, var(--bg-main) 100%); border-bottom: 1px solid var(--border-color); padding: 3rem 0 2rem;">
+    <div class="container" style="max-width: 800px; text-align: center;">
+      <span class="section-tag">Direct Communication</span>
+      <h1 style="font-size: 2.3rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 0.5rem;">
+        We're Here to Help You Settle on Campus
+      </h1>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.6;">
+        Have a question about hostel bookings, need campus inspection assistance, or want to list your hostel property? Reach out directly.
+      </p>
+    </div>
+  </div>
+
+  <!-- Contact Grid -->
+  <main class="container" style="padding: 3.5rem 1.25rem 5rem;">
+    <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3rem; align-items: flex-start;">
+      
+      <!-- Contact Form -->
+      <div style="background: white; border-radius: var(--radius-lg); border: 1px solid var(--border-color); padding: 2.25rem; box-shadow: var(--shadow-sm);">
+        <h2 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 0.25rem;">Send Us a Message</h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.75rem;">
+          Fill out the form below and our campus representative will respond within 24 business hours.
+        </p>
+
+        <form id="contact-form" onsubmit="handleContactSubmit(event)">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Full Name *</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="e.g. Kwame Boateng" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address *</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="e.g. student@ug.edu.gh" required />
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+            <div class="form-group">
+              <label class="form-label" for="contact-phone">Phone / WhatsApp Number *</label>
+              <input type="tel" id="contact-phone" class="form-control" placeholder="+233 24 123 4567" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-uni">Your University (Optional)</label>
+              <select id="contact-uni" class="form-control">
+                <option value="">Select University</option>
+                <option value="University of Ghana">University of Ghana (UG Legon)</option>
+                <option value="KNUST">KNUST (Kumasi)</option>
+                <option value="University of Cape Coast">University of Cape Coast (UCC)</option>
+                <option value="University of Education, Winneba">University of Education, Winneba (UEW)</option>
+                <option value="University for Development Studies">University for Development Studies (UDS)</option>
+                <option value="University of Professional Studies, Accra">UPSA (Accra)</option>
+                <option value="Accra Technical University">Accra Technical University (ATU)</option>
+                <option value="Other">Other Ghanaian Institution</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="contact-subject">Subject *</label>
+            <input type="text" id="contact-subject" class="form-control" placeholder="e.g. Inquiring about room availability near Legon" required />
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.75rem;">
+            <label class="form-label" for="contact-message">Message *</label>
+            <textarea id="contact-message" class="form-control" rows="5" placeholder="Type your detailed message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            Send Message ✉️
+          </button>
+        </form>
+      </div>
+
+      <!-- Information & Direct WhatsApp Cards -->
+      <div>
+        <!-- Instant WhatsApp Card -->
+        <div style="background: linear-gradient(135deg, #065f46 0%, #047857 100%); color: white; border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 1.75rem; box-shadow: var(--shadow-md);">
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">💬</div>
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem;">Chat on WhatsApp</h3>
+          <p style="font-size: 0.92rem; color: #d1fae5; line-height: 1.5; margin-bottom: 1.25rem;">
+            Need quick clarification on hostel availability or want to report an unverified listing? Chat directly with our Ghanaian support desk.
+          </p>
+          <a 
+            href="https://wa.me/233244567890?text=Hello%20HostelHub%20Ghana,%20I%20need%20assistance%20finding%20a%20hostel%20for%20my%20university." 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp"
+            style="width: 100%; font-weight: 700;"
+          >
+            Start WhatsApp Chat 🚀
+          </a>
+        </div>
+
+        <!-- Physical Office & Contact Details -->
+        <div style="background: white; border-radius: var(--radius-lg); border: 1px solid var(--border-color); padding: 1.75rem; box-shadow: var(--shadow-sm);">
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1.25rem;">Office & Help Lines</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 1.25rem; font-size: 0.9rem;">
+            <div style="display: flex; gap: 0.85rem;">
+              <span style="font-size: 1.25rem;">📍</span>
+              <div>
+                <strong>Accra Office:</strong><br/>
+                <span style="color: var(--text-secondary);">Plot 14, Legon - Madina Bypass, Greater Accra, Ghana</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.85rem;">
+              <span style="font-size: 1.25rem;">📞</span>
+              <div>
+                <strong>Customer Support Lines:</strong><br/>
+                <a href="tel:+233302984567" style="color: var(--primary); font-weight: 600;">+233 (0) 30 298 4567</a><br/>
+                <a href="tel:+233244567890" style="color: var(--primary); font-weight: 600;">+233 24 456 7890</a>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.85rem;">
+              <span style="font-size: 1.25rem;">✉️</span>
+              <div>
+                <strong>Official Email:</strong><br/>
+                <a href="mailto:support@hostelhub.com.gh" style="color: var(--primary);">support@hostelhub.com.gh</a>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.85rem;">
+              <span style="font-size: 1.25rem;">🕒</span>
+              <div>
+                <strong>Support Desk Hours:</strong><br/>
+                <span style="color: var(--text-secondary);">Monday – Saturday: 8:00 AM – 7:00 PM GMT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="main-footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script type="module">
+    import { setupNavigation, showToast } from './js/app.js';
+
+    setupNavigation('contact');
+
+    // Auto-fill subject if URL query present
+    const urlParams = new URLSearchParams(window.location.search);
+    const sub = urlParams.get('subject');
+    if (sub) {
+      const subjectInput = document.getElementById('contact-subject');
+      if (subjectInput) subjectInput.value = sub;
+    }
+
+    window.handleContactSubmit = function(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value;
+      showToast(`Thank you, ${name}! Your inquiry has been logged. Our campus representative will reach out shortly.`, 'success');
+      document.getElementById('contact-form').reset();
+    };
+  </script>
+</body>
+</html>

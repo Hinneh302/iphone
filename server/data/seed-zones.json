@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ayeduase",
+    "name": "Ayeduase",
+    "fullName": "Ayeduase (Near Brunei & Ayeduase Gate)",
+    "hostelsCount": 10,
+    "avgPrice": 4900,
+    "distanceToCampus": "3 - 8 mins walk (0.3 km - 0.8 km)",
+    "popularWith": "College of Science, Engineering, Pharmacy & CCB students",
+    "description": "The most vibrant student community directly beside the Ayeduase Gate. Walking distance to lecture halls, commercial area food joints, and photocopy centers.",
+    "tag": "Walking Distance",
+    "image": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "kotei",
+    "name": "Kotei",
+    "fullName": "Kotei (Luxury, Pools & Shuttles)",
+    "hostelsCount": 10,
+    "avgPrice": 5100,
+    "distanceToCampus": "10 - 15 mins by shuttle / walk (1.0 km - 1.5 km)",
+    "popularWith": "Business School, Medical Students & Luxury Seekers",
+    "description": "Known for executive multi-story hostels, private swimming pools, gyms, and dedicated hostel shuttle buses running students straight to campus.",
+    "tag": "Executive & Shuttles",
+    "image": "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "newsite",
+    "name": "New Site",
+    "fullName": "New Site (Ayeduase / Kotei New Site)",
+    "hostelsCount": 10,
+    "avgPrice": 5050,
+    "distanceToCampus": "7 - 12 mins walk (0.7 km - 1.0 km)",
+    "popularWith": "Students seeking peaceful, modern study environments",
+    "description": "Rapidly expanding residential enclave boasting modern architectural designs, quiet revision surroundings, wide compound parking, and reliable water boreholes.",
+    "tag": "Serene & Modern",
+    "image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "bomso",
+    "name": "Bomso",
+    "fullName": "Bomso (Near Bomso Gate & Tech Junction)",
+    "hostelsCount": 10,
+    "avgPrice": 5000,
+    "distanceToCampus": "4 - 10 mins walk to Bomso Gate (0.3 km - 0.8 km)",
+    "popularWith": "CABE (Built Environment), CoHSS, Art & Social Science students",
+    "description": "Highly accessible residential zone situated right at the KNUST Bomso Gate and Tech Junction. Outstanding access to Kumasi transport links and quiet compounds.",
+    "tag": "Bomso Gate Access",
+    "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80"
+  }
+]

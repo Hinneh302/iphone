@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KNUST Hostels | 40 Verified Student Hostels in Kumasi - HostelHub</title>
+  <meta name="description" content="Find and compare 40 verified KNUST hostels in Kumasi across Ayeduase, Kotei, New Site, and Bomso. Direct WhatsApp owner contacts, room rates in GH₵, and vacancy status." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar Placeholder -->
+  <div id="main-nav-placeholder"></div>
+
+  <!-- Page Header -->
+  <div style="background: linear-gradient(180deg, #ffffff 0%, var(--bg-main) 100%); border-bottom: 1px solid var(--border-color); padding: 2.25rem 0;">
+    <div class="container">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+        <div>
+          <span class="section-tag" style="margin-bottom: 0.25rem;">KNUST Student Accommodation Directory</span>
+          <h1 style="font-size: 2rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em;">
+            40 Verified KNUST Hostels
+          </h1>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            Explore verified private hostels across <strong>Ayeduase, Kotei, New Site</strong>, and <strong>Bomso</strong> in Kumasi.
+          </p>
+        </div>
+
+        <a href="student-dashboard.html" class="btn btn-outline-primary btn-sm">
+          ❤️ View My Saved Hostels
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Search & Results Layout -->
+  <main class="container">
+    <div class="hostels-page-layout">
+      
+      <!-- Filters Sidebar -->
+      <aside class="filters-sidebar" id="filters-sidebar">
+        <div class="filters-header">
+          <h3 class="filters-title">
+            <span>⚙️</span> Filter Hostels
+          </h3>
+          <button type="button" class="filters-reset-btn" id="reset-filters-btn">
+            Reset All
+          </button>
+        </div>
+
+        <!-- Search by Name -->
+        <div class="filter-section">
+          <label class="filter-heading" for="filter-search-name">Search by Name or Zone</label>
+          <input 
+            type="text" 
+            id="filter-search-name" 
+            class="form-control" 
+            placeholder="e.g. Brunei, Frontline, Wagyingo, Gaza, Bomso..." 
+          />
+        </div>
+
+        <!-- Filter by University -->
+        <div class="filter-section">
+          <label class="filter-heading" for="filter-university">University</label>
+          <select id="filter-university" class="form-control">
+            <option value="KNUST" selected>KNUST (Kumasi Campus)</option>
+            <option value="">All Universities</option>
+          </select>
+        </div>
+
+        <!-- Filter by Residential Zone / Location -->
+        <div class="filter-section">
+          <label class="filter-heading" for="filter-location">KNUST Residential Zone</label>
+          <select id="filter-location" class="form-control">
+            <option value="">All KNUST Zones (40 Hostels)</option>
+            <option value="Ayeduase">Ayeduase (10 Hostels)</option>
+            <option value="Kotei">Kotei (10 Hostels)</option>
+            <option value="New Site">New Site / Gaza (10 Hostels)</option>
+            <option value="Bomso">Bomso / Tech Junc (10 Hostels)</option>
+          </select>
+        </div>
+
+        <!-- Price Range -->
+        <div class="filter-section">
+          <div class="filter-heading">Price Range (GH₵ / year)</div>
+          <div class="price-range-inputs">
+            <div class="price-input-wrapper">
+              <span class="price-input-currency">GH₵</span>
+              <input type="number" id="filter-min-price" class="form-control" placeholder="Min" min="0" step="200" />
+            </div>
+            <span style="color: var(--text-muted);">to</span>
+            <div class="price-input-wrapper">
+              <span class="price-input-currency">GH₵</span>
+              <input type="number" id="filter-max-price" class="form-control" placeholder="Max" min="0" step="200" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Room Type -->
+        <div class="filter-section">
+          <div class="filter-heading">Room Type</div>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter-room-type" value="1 in a room" />
+              <span>1 in a room (Single)</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter-room-type" value="2 in a room" />
+              <span>2 in a room</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter-room-type" value="3 in a room" />
+              <span>3 in a room</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter-room-type" value="4 in a room" />
+              <span>4 in a room</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Amenities -->
+        <div class="filter-section">
+          <div class="filter-heading">Amenities & Facilities</div>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter-amenity" value="WiFi" />
+              <span>📶 Fast WiFi</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter-amenity" value="Backup Generator" />
+              <span>⚡ Standby Generator</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter-amenity" value="Water Tank" />
+              <span>🚰 Water Reservoir</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter-amenity" value="24/7 Security" />
+              <span>🛡️ 24/7 Security / CCTV</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter-amenity" value="Study Room" />
+              <span>📚 Study Hall</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter-amenity" value="Air Conditioning" />
+              <span>❄️ Air Conditioning</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filter-amenity" value="Cafeteria" />
+              <span>🍲 Canteen / Food Bay</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Availability Toggle -->
+        <div class="filter-section">
+          <label class="checkbox-label" style="font-weight: 600; color: var(--text-primary);">
+            <input type="checkbox" id="filter-available-only" />
+            <span>Show Only Vacant Hostels</span>
+          </label>
+        </div>
+      </aside>
+
+      <!-- Results Area -->
+      <section class="results-container">
+        
+        <!-- Zone Quick Selector Pills -->
+        <div class="zone-pills-bar" id="knust-zone-pills">
+          <button type="button" class="zone-filter-pill active" data-zone="">
+            <span>All KNUST</span>
+            <span class="pill-count">40</span>
+          </button>
+          <button type="button" class="zone-filter-pill" data-zone="Ayeduase">
+            <span>📍 Ayeduase</span>
+            <span class="pill-count">10</span>
+          </button>
+          <button type="button" class="zone-filter-pill" data-zone="Kotei">
+            <span>📍 Kotei</span>
+            <span class="pill-count">10</span>
+          </button>
+          <button type="button" class="zone-filter-pill" data-zone="New Site">
+            <span>📍 New Site</span>
+            <span class="pill-count">10</span>
+          </button>
+          <button type="button" class="zone-filter-pill" data-zone="Bomso">
+            <span>📍 Bomso</span>
+            <span class="pill-count">10</span>
+          </button>
+        </div>
+
+        <!-- Results Header Controls -->
+        <div class="results-header-bar">
+          <div class="results-count">
+            Showing <span id="results-count-number">0</span> student hostels
+          </div>
+
+          <div class="results-sort-bar">
+            <label class="sort-label" for="sort-by-select">Sort By:</label>
+            <select id="sort-by-select" class="form-control" style="width: auto; padding: 0.45rem 0.75rem; font-size: 0.88rem;">
+              <option value="featured">Featured First</option>
+              <option value="price-asc">Price: Low to High (GH₵)</option>
+              <option value="price-desc">Price: High to Low (GH₵)</option>
+              <option value="rating">Highest Rated ★</option>
+              <option value="available">Most Available Rooms</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Hostels Card Grid -->
+        <div class="hostels-grid" id="hostels-list-container">
+          <!-- Populated by hostels.js -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="main-footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script type="module">
+    import { setupNavigation } from './js/app.js';
+    import { initHostelsPage } from './js/hostels.js';
+
+    setupNavigation('hostels');
+    initHostelsPage();
+  </script>
+</body>
+</html>

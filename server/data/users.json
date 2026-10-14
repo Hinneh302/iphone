@@ -1,0 +1,51 @@
+[
+  {
+    "id": "usr-student",
+    "name": "Kwame Boateng",
+    "email": "student@ug.edu.gh",
+    "password": "$2b$10$kOJw56jQbMVW7iFNPbcNI.07yciBTPmGEIzLQBh1ieLE4KHVdnaym",
+    "phone": "+233 24 123 4567",
+    "role": "student",
+    "university": "KNUST",
+    "studentId": "10982344",
+    "level": "Level 300",
+    "status": "active",
+    "createdAt": "2026-09-15T10:29:45.662Z"
+  },
+  {
+    "id": "usr-owner",
+    "name": "Mr. Kofi Mensah",
+    "email": "owner@hostels.gh",
+    "password": "$2b$10$t2iVIVAN56Mo5Sp8GnSppOPTjUaT9l2RnDpaNsh3eazFaSOVP2PKK",
+    "phone": "+233 24 456 7890",
+    "role": "owner",
+    "university": "KNUST",
+    "businessName": "Mensah Hostels & Accommodations",
+    "status": "active",
+    "createdAt": "2026-09-15T10:29:45.798Z"
+  },
+  {
+    "id": "usr-admin",
+    "name": "Ama Serwaa",
+    "email": "admin@hostelhub.gh",
+    "password": "$2b$10$h0bwz6skgXE6yYo94Ro.0.qAabytsFqVFfQtRQBh4.84q2Vr/65P2",
+    "phone": "+233 24 999 8888",
+    "role": "admin",
+    "status": "active",
+    "createdAt": "2026-09-15T10:29:45.906Z"
+  },
+  {
+    "id": "usr-1789468198216",
+    "name": "Abena Mensah",
+    "email": "abena@st.ug.edu.gh",
+    "password": "$2b$10$XNMqB3SMjAPp8fOI4WPj2OgykIw2GbHbz3zbUD4EwOEJqNXT5gMdO",
+    "phone": "+233 24 555 7788",
+    "role": "student",
+    "university": "KNUST",
+    "studentId": "GH-861448",
+    "level": "Level 200",
+    "businessName": null,
+    "status": "active",
+    "createdAt": "2026-09-15T10:29:58.216Z"
+  }
+]

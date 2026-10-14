@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hostel Owner Dashboard - HostelHub Ghana</title>
+  <meta name="description" content="Hostel owner portal on HostelHub Ghana. Manage hostel listings, receive student room inquiries, and approve bookings." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar Placeholder -->
+  <div id="main-nav-placeholder"></div>
+
+  <!-- Dashboard Container -->
+  <div class="dashboard-layout">
+    
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="dash-user-card">
+        <div class="dash-avatar" style="background-color: #fef3c7; color: #d97706;">🏢</div>
+        <div class="dash-user-name current-user-name">Mr. Kofi Mensah</div>
+        <div class="dash-user-role current-user-role" style="background-color: #dbeafe; color: #1e40af;">HOSTEL OWNER</div>
+        <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;" class="current-user-email">owner@hostels.gh</div>
+      </div>
+
+      <nav class="dash-nav">
+        <a href="#overview" class="dash-nav-item active" onclick="switchOwnerTab('overview', this)">
+          <span>📊</span> Overview & Hostels
+        </a>
+        <a href="#inquiries" class="dash-nav-item" onclick="switchOwnerTab('inquiries', this)">
+          <span>💬</span> Student Inquiries
+        </a>
+        <a href="#bookings" class="dash-nav-item" onclick="switchOwnerTab('bookings', this)">
+          <span>📋</span> Room Booking Requests
+        </a>
+        <a href="hostels.html" class="dash-nav-item" style="margin-top: 1.5rem; color: var(--primary);">
+          <span>🌐</span> View Public Directory
+        </a>
+      </nav>
+
+      <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <button class="btn btn-outline btn-sm" onclick="window.logoutUser()" style="width: 100%; color: var(--danger); border-color: #fecaca;">
+          🚪 Log Out
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      
+      <!-- Top Action Bar -->
+      <div class="dash-header-bar">
+        <div>
+          <h1 class="dash-page-title">Hostel Management Portal</h1>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 2px;">
+            Manage your Ghanaian hostel properties, fill vacant beds, and respond to student inquiries.
+          </p>
+        </div>
+
+        <button type="button" class="btn btn-primary" id="open-add-hostel-btn">
+          + Add New Hostel 🏢
+        </button>
+      </div>
+
+      <!-- Stat Cards -->
+      <div class="dash-metrics-grid">
+        <div class="metric-card">
+          <div class="metric-icon" style="background-color: #eff6ff; color: #1e40af;">🏢</div>
+          <div>
+            <div class="metric-val" id="metric-owner-hostels">0</div>
+            <div class="metric-lbl">Listed Hostels</div>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon" style="background-color: #f0fdf4; color: #16a34a;">🛏️</div>
+          <div>
+            <div class="metric-val" id="metric-owner-rooms">0</div>
+            <div class="metric-lbl">Available Vacant Rooms</div>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon" style="background-color: #fefce8; color: #ca8a04;">💬</div>
+          <div>
+            <div class="metric-val" id="metric-owner-inquiries">0</div>
+            <div class="metric-lbl">Pending Student Inquiries</div>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon" style="background-color: #f5f3ff; color: #7c3aed;">📝</div>
+          <div>
+            <div class="metric-val" id="metric-owner-bookings">0</div>
+            <div class="metric-lbl">Pending Booking Requests</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 1: Overview & My Hostels Table -->
+      <div class="dash-section active" id="owner-tab-overview">
+        <div class="dash-section-header">
+          <div>
+            <h2 class="dash-section-title">My Hostel Properties</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Manage pricing, vacancy rates, and descriptions</span>
+          </div>
+        </div>
+
+        <div class="dash-table-container">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Hostel Name & Location</th>
+                <th>University</th>
+                <th>Price / Academic Year</th>
+                <th>Available Rooms</th>
+                <th>Verification</th>
+                <th>Rating</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="owner-hostels-tbody">
+              <!-- Populated by dashboard.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab 2: Inquiries -->
+      <div class="dash-section" id="owner-tab-inquiries" style="display: none;">
+        <div class="dash-section-header">
+          <h2 class="dash-section-title">Student Room Inquiries</h2>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Reply to students or message them directly on WhatsApp</span>
+        </div>
+
+        <div class="dash-table-container">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Student & Contact</th>
+                <th>Hostel</th>
+                <th>Room Type</th>
+                <th>Message</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="owner-inquiries-tbody">
+              <!-- Populated by dashboard.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab 3: Room Booking Requests -->
+      <div class="dash-section" id="owner-tab-bookings" style="display: none;">
+        <div class="dash-section-header">
+          <h2 class="dash-section-title">Room Allocation Requests</h2>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Review and approve room bookings submitted by students</span>
+        </div>
+
+        <div class="dash-table-container">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Booking #</th>
+                <th>Student Info</th>
+                <th>Hostel</th>
+                <th>Room Type & Rate</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="owner-bookings-tbody">
+              <!-- Populated by dashboard.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Add Hostel Modal -->
+  <div class="modal-overlay" id="add-hostel-modal">
+    <div class="modal-content" style="max-width: 680px;">
+      <div class="modal-header">
+        <h3 class="modal-title">List a New Hostel Property</h3>
+        <button type="button" class="modal-close-btn" id="close-add-hostel-modal">&times;</button>
+      </div>
+
+      <form id="add-hostel-form">
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" for="hostel-name-input">Hostel Name *</label>
+          <input type="text" id="hostel-name-input" class="form-control" placeholder="e.g. Royal Palm Hostel" required />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="hostel-uni-select">Nearest University *</label>
+            <select id="hostel-uni-select" class="form-control" required>
+              <option value="KNUST">KNUST (Kumasi)</option>
+              <option value="University of Ghana">University of Ghana (UG Legon)</option>
+              <option value="University of Cape Coast">University of Cape Coast (UCC)</option>
+              <option value="University of Education, Winneba">University of Education, Winneba (UEW)</option>
+              <option value="University for Development Studies">University for Development Studies (UDS)</option>
+              <option value="University of Professional Studies, Accra">UPSA (Accra)</option>
+              <option value="Accra Technical University">Accra Technical University (ATU)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="hostel-location-input">Residence Zone Description *</label>
+            <input type="text" id="hostel-location-input" class="form-control" placeholder="Write full description (e.g. Ayeduase North, 5 mins walk to Commercial Area)" required />
+          </div>
+        </div>
+
+        <!-- Room Types & Stated Price for Each -->
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.35rem;">
+            <label class="form-label" style="font-weight: 700; margin-bottom: 0;">Room Types & Stated Price for Each *</label>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Specify price (GH₵ / academic year) for each room option</span>
+          </div>
+          <div class="room-pricing-editor-grid">
+            <div class="room-pricing-card active" id="new-room-card-1">
+              <div class="room-pricing-head">
+                <label class="checkbox-label" style="font-weight: 700; font-size: 0.88rem; cursor: pointer;">
+                  <input type="checkbox" id="new-room-enable-1" value="1 in a room" checked />
+                  🛏️ 1 in a room
+                </label>
+                <span class="room-occupancy-pill">One in One</span>
+              </div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.4rem;">Single occupancy room</div>
+              <div class="room-price-input-wrapper">
+                <span class="room-price-currency">GH₵</span>
+                <input type="number" id="new-room-price-1" class="form-control room-price-input" value="8000" min="500" step="50" placeholder="e.g. 8000" />
+              </div>
+            </div>
+
+            <div class="room-pricing-card active" id="new-room-card-2">
+              <div class="room-pricing-head">
+                <label class="checkbox-label" style="font-weight: 700; font-size: 0.88rem; cursor: pointer;">
+                  <input type="checkbox" id="new-room-enable-2" value="2 in a room" checked />
+                  🛏️🛏️ 2 in a room
+                </label>
+                <span class="room-occupancy-pill">2 Students</span>
+              </div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.4rem;">Double occupancy room</div>
+              <div class="room-price-input-wrapper">
+                <span class="room-price-currency">GH₵</span>
+                <input type="number" id="new-room-price-2" class="form-control room-price-input" value="5000" min="500" step="50" placeholder="e.g. 5000" />
+              </div>
+            </div>
+
+            <div class="room-pricing-card" id="new-room-card-3">
+              <div class="room-pricing-head">
+                <label class="checkbox-label" style="font-weight: 700; font-size: 0.88rem; cursor: pointer;">
+                  <input type="checkbox" id="new-room-enable-3" value="3 in a room" />
+                  🛏️🛏️🛏️ 3 in a room
+                </label>
+                <span class="room-occupancy-pill">3 Students</span>
+              </div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.4rem;">Triple occupancy room</div>
+              <div class="room-price-input-wrapper">
+                <span class="room-price-currency">GH₵</span>
+                <input type="number" id="new-room-price-3" class="form-control room-price-input" value="4200" min="500" step="50" placeholder="e.g. 4200" disabled />
+              </div>
+            </div>
+
+            <div class="room-pricing-card active" id="new-room-card-4">
+              <div class="room-pricing-head">
+                <label class="checkbox-label" style="font-weight: 700; font-size: 0.88rem; cursor: pointer;">
+                  <input type="checkbox" id="new-room-enable-4" value="4 in a room" checked />
+                  🛏️🛏️🛏️🛏️ 4 in a room
+                </label>
+                <span class="room-occupancy-pill">4 Students</span>
+              </div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.4rem;">Quad occupancy room</div>
+              <div class="room-price-input-wrapper">
+                <span class="room-price-currency">GH₵</span>
+                <input type="number" id="new-room-price-4" class="form-control room-price-input" value="3500" min="500" step="50" placeholder="e.g. 3500" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="hostel-rooms-input">Available Vacant Rooms</label>
+            <input type="number" id="hostel-rooms-input" class="form-control" placeholder="e.g. 6" value="6" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="hostel-distance-input">Proximity / Distance to Campus</label>
+            <input type="text" id="hostel-distance-input" class="form-control" placeholder="e.g. 5 mins walk to Commercial Gate" value="5 mins walk to campus" />
+          </div>
+        </div>
+
+        <!-- Locations Form (Two or more locations of same hostel or NONE button) -->
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <div>
+              <label class="form-label" style="font-weight: 700; margin-bottom: 0.15rem;">Hostel Locations / Branches</label>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Are there two or more locations of this same hostel? If not, select <strong>None</strong>.</div>
+            </div>
+            <div class="locations-toggle-bar">
+              <button type="button" class="btn btn-sm active" id="new-loc-btn-none" style="padding: 0.25rem 0.65rem;">
+                🚫 None (Single Location)
+              </button>
+              <button type="button" class="btn btn-sm btn-outline" id="new-loc-btn-multiple" style="padding: 0.25rem 0.65rem;">
+                🏢 2 or More Locations
+              </button>
+            </div>
+          </div>
+
+          <div id="new-loc-none-box" class="location-none-banner">
+            <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 0.2rem;">✓ Single Location Property (None selected)</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">
+              This hostel has no additional annexes or second branches. If you manage two or more hostel branches under this name, click "2 or More Locations" above.
+            </div>
+          </div>
+
+          <div id="new-loc-multiple-box" style="display: none; padding: 0.75rem; background: #f8fafc; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-primary);">Registered Branches (2 or more)</span>
+              <button type="button" class="btn btn-outline btn-sm" id="new-btn-quick-none" style="font-size: 0.75rem; padding: 0.2rem 0.5rem; color: #dc2626;">
+                ✕ Switch to None
+              </button>
+            </div>
+            <div id="new-branches-list" style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <div class="location-branch-card" style="padding: 0.6rem;">
+                <strong style="font-size: 0.82rem;">Branch #1 (Main Location)</strong>
+                <input type="text" class="form-control new-branch-name" value="Branch 1 (Main Campus)" placeholder="Branch Name" style="font-size: 0.8rem; padding: 0.35rem 0.5rem; margin-top: 0.25rem;" />
+                <input type="text" class="form-control new-branch-address" placeholder="Address & landmark (e.g. Ayeduase Gate)" style="font-size: 0.8rem; padding: 0.35rem 0.5rem; margin-top: 0.25rem;" />
+              </div>
+              <div class="location-branch-card" style="padding: 0.6rem;">
+                <strong style="font-size: 0.82rem;">Branch #2 (Annex / Second Location)</strong>
+                <input type="text" class="form-control new-branch-name" value="Branch 2 (Annex)" placeholder="Branch Name" style="font-size: 0.8rem; padding: 0.35rem 0.5rem; margin-top: 0.25rem;" />
+                <input type="text" class="form-control new-branch-address" placeholder="Address & landmark (e.g. Kotei Road)" style="font-size: 0.8rem; padding: 0.35rem 0.5rem; margin-top: 0.25rem;" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label">Key Amenities Provided</label>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; font-size: 0.85rem;">
+            <label class="checkbox-label"><input type="checkbox" name="new-hostel-amenity" value="WiFi" checked /> Fast WiFi</label>
+            <label class="checkbox-label"><input type="checkbox" name="new-hostel-amenity" value="Backup Generator" checked /> Standby Generator</label>
+            <label class="checkbox-label"><input type="checkbox" name="new-hostel-amenity" value="Water Tank" checked /> Polytank Reservoir</label>
+            <label class="checkbox-label"><input type="checkbox" name="new-hostel-amenity" value="24/7 Security" checked /> 24/7 Security</label>
+            <label class="checkbox-label"><input type="checkbox" name="new-hostel-amenity" value="Study Room" checked /> Study Hall</label>
+            <label class="checkbox-label"><input type="checkbox" name="new-hostel-amenity" value="Air Conditioning" /> Air Conditioning</label>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label">Upload Hostel Picture</label>
+          <div style="display: flex; gap: 0.5rem; align-items: center;">
+            <input type="file" id="new-hostel-file-input" accept="image/*" class="form-control" style="font-size: 0.82rem;" />
+          </div>
+          <input type="hidden" id="new-hostel-image-data" value="" />
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label class="form-label" for="hostel-desc-input">Hostel Description</label>
+          <textarea id="hostel-desc-input" class="form-control" rows="3" placeholder="Describe room features, study atmosphere, proximity to lecture halls..." required>Peaceful, newly painted student hostel with regular water flow, constant power backup, and quiet study rooms suitable for serious university students.</textarea>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; justify-content: flex-end;">
+          <button type="button" class="btn btn-outline" onclick="document.getElementById('add-hostel-modal').classList.remove('active')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Publish Hostel Listing 🚀</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Placeholder -->
+  <div id="main-footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script type="module">
+    import { setupNavigation } from './js/app.js';
+    import { requireRole, handleLogout } from './js/auth.js';
+    import { initOwnerDashboard } from './js/dashboard.js';
+
+    // Verify session
+    requireRole(['owner', 'admin']);
+
+    setupNavigation('dashboard');
+    initOwnerDashboard();
+
+    window.logoutUser = handleLogout;
+
+    window.switchOwnerTab = function(tabId, el) {
+      document.querySelectorAll('.dash-nav-item').forEach(item => item.classList.remove('active'));
+      document.querySelectorAll('.dash-section').forEach(sec => sec.style.display = 'none');
+
+      if (el) el.classList.add('active');
+      const target = document.getElementById('owner-tab-' + tabId);
+      if (target) target.style.display = 'block';
+    };
+  </script>
+</body>
+</html>
