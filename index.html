@@ -53,6 +53,12 @@
   .pulse-slow { animation: pulseSlow 2s infinite ease-in-out; }
   @keyframes spinSlow { to { transform: rotate(360deg); } }
   .spin-slow { animation: spinSlow 1s linear infinite; }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    15%, 45%, 75% { transform: translateX(-6px); }
+    30%, 60%, 90% { transform: translateX(6px); }
+  }
+  .shake { animation: shake .4s ease-in-out; }
 </style>
 </head>
 <body class="text-ink font-sans antialiased selection:bg-gold/20">
@@ -429,7 +435,15 @@ const Icon = ({ name, className = "w-5 h-5" }) => {
     eye: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />,
     eyeOff: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l18 18" />,
     chevronDown: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />,
-    chevronUp: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7" />
+    chevronUp: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7" />,
+    alert: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />,
+    alertCircle: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />,
+    userPlus: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />,
+    trash: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />,
+    key: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />,
+    users: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />,
+    checkCircle: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />,
+    sparkles: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.286L13 21l-2.286-6.857L5 12l5.714-2.286L13 3z" />
   };
   return (
     <svg className={className} fill={name === 'star' ? 'currentColor' : 'none'} viewBox="0 0 24 24" stroke="currentColor">
@@ -483,12 +497,98 @@ const Toast = ({ msg }) => {
 };
 
 /* =========================================================
-   LOGIN / AUTH MODAL
+   SMART AUTHENTICATION & ACCOUNTS REGISTRY
    ========================================================= */
-const AuthModal = ({ isOpen, onClose, onLoginSuccess, showToast }) => {
-  const [tab, setTab] = useState("signin"); // "signin" or "signup"
+const ACCOUNTS_DB_KEY = "core_registered_accounts_v2";
+
+const DEFAULT_SEED_ACCOUNTS = [
+  {
+    id: "usr_kwame",
+    name: "Kwame Mensah",
+    email: "kwame.mensah@gmail.com",
+    phone: "0244123456",
+    password: "password123",
+    avatar: "K",
+    role: "Verified Customer",
+    memberSince: 2024,
+    savedOnDevice: true,
+    lastActive: "Today"
+  },
+  {
+    id: "usr_nana",
+    name: "Nana Osei",
+    email: "nana.osei@gmail.com",
+    phone: "0201122334",
+    password: "core2026",
+    avatar: "N",
+    role: "Gold VIP Member",
+    memberSince: 2023,
+    savedOnDevice: true,
+    lastActive: "Yesterday"
+  },
+  {
+    id: "usr_ama",
+    name: "Ama Serwaa",
+    email: "ama.serwaa@gmail.com",
+    phone: "0559988776",
+    password: "iphone2026",
+    avatar: "A",
+    role: "Verified Customer",
+    memberSince: 2025,
+    savedOnDevice: true,
+    lastActive: "Oct 12"
+  }
+];
+
+const getAccountsDB = () => {
+  try {
+    const raw = localStorage.getItem(ACCOUNTS_DB_KEY);
+    if (!raw) {
+      localStorage.setItem(ACCOUNTS_DB_KEY, JSON.stringify(DEFAULT_SEED_ACCOUNTS));
+      return DEFAULT_SEED_ACCOUNTS;
+    }
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) && parsed.length > 0 ? parsed : DEFAULT_SEED_ACCOUNTS;
+  } catch (e) {
+    return DEFAULT_SEED_ACCOUNTS;
+  }
+};
+
+const saveAccountsDB = (accounts) => {
+  try {
+    localStorage.setItem(ACCOUNTS_DB_KEY, JSON.stringify(accounts));
+  } catch (e) {
+    console.error("Failed to save accounts database", e);
+  }
+};
+
+const findAccountByIdentifier = (ident) => {
+  if (!ident) return null;
+  const accounts = getAccountsDB();
+  const clean = ident.trim().toLowerCase();
+  const digitsOnly = clean.replace(/[^0-9]/g, "");
+
+  return accounts.find(acc => {
+    const accEmail = (acc.email || "").trim().toLowerCase();
+    const accPhone = (acc.phone || "").trim().toLowerCase();
+    const accDigits = accPhone.replace(/[^0-9]/g, "");
+
+    if (accEmail && accEmail === clean) return true;
+    if (clean.includes("@") && accEmail === clean) return true;
+    if (digitsOnly.length >= 7 && accDigits.length >= 7 && (accDigits.endsWith(digitsOnly) || digitsOnly.endsWith(accDigits))) return true;
+    if (accPhone && accPhone === clean) return true;
+    return false;
+  }) || null;
+};
+
+/* =========================================================
+   AUTHENTICATION MODAL (CLEAN & MINIMAL)
+   ========================================================= */
+const AuthModal = ({ isOpen, onClose, onLoginSuccess, showToast, initialTab = "signin" }) => {
+  const [tab, setTab] = useState(initialTab === "signup" ? "signup" : "signin");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [shake, setShake] = useState(false);
   
   const [formData, setFormData] = useState({
     name: "",
@@ -497,188 +597,449 @@ const AuthModal = ({ isOpen, onClose, onLoginSuccess, showToast }) => {
     password: "",
     remember: true
   });
-  const [error, setError] = useState("");
+
+  const [errorState, setErrorState] = useState(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      setTab(initialTab === "signup" ? "signup" : "signin");
+      setErrorState(null);
+    }
+  }, [isOpen, initialTab]);
+
+  // Allow Escape key to dismiss/remove modal
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" && isOpen) {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setError("");
-
-    if (!formData.email) {
-      setError("Please enter your email or phone number.");
-      return;
-    }
-    if (!formData.password || formData.password.length < 4) {
-      setError("Password must be at least 4 characters.");
-      return;
-    }
-    if (tab === "signup" && !formData.name) {
-      setError("Please enter your full name.");
-      return;
-    }
-
-    setLoading(true);
-
-    // Simulate authenticating against authentication system
-    setTimeout(() => {
-      setLoading(false);
-      const user = {
-        name: tab === "signup" ? formData.name : (formData.email.split("@")[0] || "Kwame"),
-        email: formData.email,
-        phone: formData.phone || "+233 24 000 0000",
-        avatar: (tab === "signup" ? formData.name[0] : formData.email[0]).toUpperCase(),
-        memberSince: new Date().getFullYear(),
-        role: "Verified Customer"
-      };
-
-      localStorage.setItem("core_auth_user", JSON.stringify(user));
-      onLoginSuccess(user);
-      showToast(tab === "signup" ? "Account created successfully! Welcome." : `Welcome back, ${user.name}!`);
-      onClose();
-    }, 1200);
+  const triggerShake = () => {
+    setShake(true);
+    setTimeout(() => setShake(false), 500);
   };
 
-  const fillDemo = () => {
-    setFormData({
-      name: "Kwame Mensah",
-      email: "kwame.mensah@gmail.com",
-      phone: "+233 24 555 1234",
-      password: "password123",
-      remember: true
-    });
-    setError("");
+  const handleIdentifierChange = (val) => {
+    setFormData(prev => ({ ...prev, email: val }));
+    if (errorState) setErrorState(null);
+  };
+
+  const handlePasswordChange = (val) => {
+    setFormData(prev => ({ ...prev, password: val }));
+    if (errorState) setErrorState(null);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setErrorState(null);
+
+    const ident = formData.email.trim();
+    if (!ident) {
+      setErrorState({ type: "VALIDATION", message: "Please enter your email or phone number." });
+      triggerShake();
+      return;
+    }
+
+    if (tab === "signin") {
+      const matchedAccount = findAccountByIdentifier(ident);
+
+      if (!matchedAccount) {
+        setErrorState({
+          type: "NOT_FOUND",
+          message: "No account found. Create an account to get started.",
+          identifier: ident
+        });
+        triggerShake();
+        return;
+      }
+
+      if (!formData.password) {
+        setErrorState({ type: "VALIDATION", message: "Please enter your password." });
+        triggerShake();
+        return;
+      }
+
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+
+        if (matchedAccount.password !== formData.password) {
+          setErrorState({
+            type: "WRONG_PASSWORD",
+            message: "Incorrect password. Please try again."
+          });
+          triggerShake();
+          return;
+        }
+
+        // Login success
+        const all = getAccountsDB();
+        const updatedAccounts = all.map(a => {
+          if (a.id === matchedAccount.id) {
+            return {
+              ...a,
+              lastActive: "Just now",
+              savedOnDevice: true
+            };
+          }
+          return a;
+        });
+        saveAccountsDB(updatedAccounts);
+
+        const activeSessionUser = {
+          id: matchedAccount.id,
+          name: matchedAccount.name,
+          email: matchedAccount.email || matchedAccount.phone,
+          phone: matchedAccount.phone,
+          avatar: matchedAccount.avatar || matchedAccount.name[0].toUpperCase(),
+          role: matchedAccount.role || "Verified Customer",
+          memberSince: matchedAccount.memberSince || new Date().getFullYear()
+        };
+
+        localStorage.setItem("core_auth_user", JSON.stringify(activeSessionUser));
+        onLoginSuccess(activeSessionUser);
+        showToast(`Welcome back, ${matchedAccount.name}!`);
+        onClose();
+      }, 450);
+
+    } else if (tab === "signup") {
+      if (!formData.name.trim()) {
+        setErrorState({ type: "VALIDATION", message: "Please enter your full name." });
+        triggerShake();
+        return;
+      }
+      if (!formData.password || formData.password.length < 6) {
+        setErrorState({ type: "VALIDATION", message: "Password must be at least 6 characters." });
+        triggerShake();
+        return;
+      }
+
+      const existing = findAccountByIdentifier(ident);
+      if (existing) {
+        setErrorState({
+          type: "ALREADY_EXISTS",
+          message: "An account already exists with this contact."
+        });
+        triggerShake();
+        return;
+      }
+
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+        const isEmail = ident.includes("@");
+        const newAccount = {
+          id: "usr_" + Date.now(),
+          name: formData.name.trim(),
+          email: isEmail ? ident.toLowerCase() : "",
+          phone: !isEmail ? ident : (formData.phone || ""),
+          password: formData.password,
+          avatar: formData.name.trim()[0].toUpperCase(),
+          role: "Verified Customer",
+          memberSince: new Date().getFullYear(),
+          savedOnDevice: true,
+          lastActive: "Just now"
+        };
+
+        const currentAccounts = getAccountsDB();
+        saveAccountsDB([newAccount, ...currentAccounts]);
+
+        const sessionUser = {
+          id: newAccount.id,
+          name: newAccount.name,
+          email: newAccount.email || newAccount.phone,
+          phone: newAccount.phone,
+          avatar: newAccount.avatar,
+          role: newAccount.role,
+          memberSince: newAccount.memberSince
+        };
+
+        localStorage.setItem("core_auth_user", JSON.stringify(sessionUser));
+        onLoginSuccess(sessionUser);
+        showToast(`Account created! Welcome, ${newAccount.name}.`);
+        onClose();
+      }, 500);
+    }
+  };
+
+  const handleSwitchToSignUp = (prefillIdent) => {
+    setTab("signup");
+    setErrorState(null);
+    if (prefillIdent) {
+      setFormData(prev => ({ ...prev, email: prefillIdent, password: "" }));
+    }
+  };
+
+  const handleSwitchToSignIn = (prefillIdent) => {
+    setTab("signin");
+    setErrorState(null);
+    if (prefillIdent) {
+      setFormData(prev => ({ ...prev, email: prefillIdent, password: "" }));
+    }
   };
 
   return (
-    <div className="fixed inset-0 z-[70] flex items-center justify-center bg-ink/75 backdrop-blur-sm p-4">
-      <div className="bg-paper border border-line w-full max-w-md rounded-3xl overflow-hidden shadow-2xl rise-in">
-        <div className="flex items-center justify-between px-6 pt-6 pb-2">
-          <div className="flex items-center gap-2">
-            <span className="w-8 h-8 rounded-lg bg-ink text-goldlight flex items-center justify-center font-display font-bold text-sm">
+    <div 
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+      className="fixed inset-0 z-[70] flex items-center justify-center bg-ink/75 backdrop-blur-sm p-4 overflow-y-auto cursor-pointer"
+      title="Click outside to close"
+    >
+      <div 
+        onClick={(e) => e.stopPropagation()}
+        className={`bg-paper border border-line w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl rise-in my-auto cursor-default ${shake ? "shake" : ""}`}
+      >
+        
+        {/* Clean Header with Close Action */}
+        <div className="flex items-center justify-between px-6 pt-5 pb-3 border-b border-line/60 bg-white">
+          <div className="flex items-center gap-2.5">
+            <span className="w-8 h-8 rounded-xl bg-ink text-goldlight flex items-center justify-center font-display font-bold text-sm shadow-sm">
               {BUSINESS.shortName[0]}
             </span>
-            <span className="font-display font-semibold text-lg">{BUSINESS.name}</span>
-          </div>
-          <button onClick={onClose} className="w-8 h-8 rounded-full bg-white border border-line flex items-center justify-center hover:border-ink/40">
-            <Icon name="x" className="w-4 h-4" />
-          </button>
-        </div>
-
-        <div className="flex border-b border-line px-6 mt-3">
-          <button
-            onClick={() => { setTab("signin"); setError(""); }}
-            className={`flex-1 py-3 text-sm font-semibold border-b-2 transition-colors ${tab === "signin" ? "border-ink text-ink" : "border-transparent text-ink/40 hover:text-ink"}`}
-          >
-            Sign In
-          </button>
-          <button
-            onClick={() => { setTab("signup"); setError(""); }}
-            className={`flex-1 py-3 text-sm font-semibold border-b-2 transition-colors ${tab === "signup" ? "border-ink text-ink" : "border-transparent text-ink/40 hover:text-ink"}`}
-          >
-            Create Account
-          </button>
-        </div>
-
-        <form onSubmit={handleSubmit} className="p-6 space-y-4">
-          {error && (
-            <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-medium">
-              {error}
-            </div>
-          )}
-
-          {tab === "signup" && (
             <div>
-              <label className="block text-xs font-semibold text-ink/70 mb-1">Full Name</label>
+              <h3 className="font-display font-semibold text-base text-ink leading-tight">
+                {tab === "signin" ? "Sign In" : "Create Account"}
+              </h3>
+              <p className="text-[11px] text-ink/50">
+                {BUSINESS.name}
+              </p>
+            </div>
+          </div>
+          <button 
+            type="button"
+            onClick={onClose} 
+            className="px-2.5 py-1 rounded-full bg-paper border border-line flex items-center gap-1 hover:border-ink/40 text-ink/70 hover:text-ink text-xs font-medium transition-colors"
+            title="Close"
+          >
+            <Icon name="x" className="w-3.5 h-3.5" />
+            <span>Close</span>
+          </button>
+        </div>
+
+        {/* SIGN IN TAB */}
+        {tab === "signin" && (
+          <form onSubmit={handleSubmit} className="p-5 space-y-3.5">
+            {errorState && errorState.type === "NOT_FOUND" && (
+              <div className="p-3 rounded-xl bg-amber-50 border border-amber-300 text-amber-950 text-xs rise-in">
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-1.5 font-medium">
+                    <Icon name="alertCircle" className="w-4 h-4 text-amber-600 flex-shrink-0" />
+                    <span>No account found.</span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleSwitchToSignUp(formData.email)}
+                    className="font-bold text-gold hover:underline underline-offset-2 flex-shrink-0"
+                  >
+                    Create Account
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {errorState && errorState.type === "WRONG_PASSWORD" && (
+              <div className="p-3 rounded-xl bg-red-50 border border-red-300 text-red-800 text-xs font-medium flex items-center gap-2 rise-in">
+                <Icon name="alert" className="w-4 h-4 text-red-600 flex-shrink-0" />
+                <span>Wrong password. Please try again.</span>
+              </div>
+            )}
+
+            {errorState && errorState.type === "VALIDATION" && (
+              <div className="p-2.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-medium flex items-center gap-2">
+                <Icon name="alert" className="w-4 h-4 flex-shrink-0" />
+                <span>{errorState.message}</span>
+              </div>
+            )}
+
+            <div>
+              <label className="text-xs font-semibold text-ink/80 block mb-1">Email or Phone</label>
               <input
                 type="text"
-                placeholder="e.g. Kwame Mensah"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl bg-white border border-line text-sm outline-none focus:border-gold"
+                placeholder="Enter email or phone"
+                value={formData.email}
+                onChange={(e) => handleIdentifierChange(e.target.value)}
+                className={`w-full px-3.5 py-2.5 rounded-xl bg-white border text-sm outline-none transition-all ${
+                  errorState && errorState.type === "NOT_FOUND"
+                    ? "border-amber-400 ring-2 ring-amber-100"
+                    : "border-line focus:border-gold"
+                }`}
               />
             </div>
-          )}
 
-          <div>
-            <label className="block text-xs font-semibold text-ink/70 mb-1">Email or Phone Number</label>
-            <input
-              type="text"
-              placeholder="e.g. kwame@gmail.com or 0244123456"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl bg-white border border-line text-sm outline-none focus:border-gold"
-            />
-          </div>
-
-          <div>
-            <div className="flex items-center justify-between mb-1">
-              <label className="text-xs font-semibold text-ink/70">Password</label>
-              {tab === "signin" && (
-                <button type="button" onClick={() => showToast("Password reset link sent to your contact")} className="text-xs text-gold hover:underline">
-                  Forgot?
+            <div>
+              <label className="text-xs font-semibold text-ink/80 block mb-1">Password</label>
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Enter password"
+                  value={formData.password}
+                  onChange={(e) => handlePasswordChange(e.target.value)}
+                  className={`w-full px-3.5 py-2.5 pr-10 rounded-xl bg-white border text-sm outline-none transition-all ${
+                    errorState && errorState.type === "WRONG_PASSWORD"
+                      ? "border-red-500 ring-2 ring-red-100"
+                      : "border-line focus:border-gold"
+                  }`}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-ink/40 hover:text-ink transition-colors p-1"
+                  title={showPassword ? "Hide password" : "Show password"}
+                >
+                  <Icon name={showPassword ? "eyeOff" : "eye"} className="w-4 h-4" />
                 </button>
-              )}
+              </div>
             </div>
-            <div className="relative">
-              <input
-                type={showPassword ? "text" : "password"}
-                placeholder="Enter password"
-                value={formData.password}
-                onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                className="w-full px-4 py-3 pr-10 rounded-xl bg-white border border-line text-sm outline-none focus:border-gold"
-              />
+
+            <div className="flex items-center gap-2 pt-1">
               <button
                 type="button"
-                onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-ink/40 hover:text-ink"
+                onClick={onClose}
+                className="w-1/3 py-2.5 rounded-xl border border-line hover:border-ink/40 text-ink/70 hover:text-ink font-medium text-sm transition-colors text-center"
               >
-                <Icon name={showPassword ? "eyeOff" : "eye"} className="w-4 h-4" />
+                Cancel
+              </button>
+              <button
+                type="submit"
+                disabled={loading}
+                className="flex-1 py-2.5 rounded-xl bg-ink text-paper font-semibold text-sm hover:bg-black transition-colors flex items-center justify-center gap-2 disabled:opacity-60 shadow-sm"
+              >
+                {loading ? (
+                  <>
+                    <Icon name="spinner" className="w-4 h-4 spin-slow" />
+                    <span>Signing In...</span>
+                  </>
+                ) : (
+                  <span>Sign In</span>
+                )}
               </button>
             </div>
-          </div>
 
-          <div className="flex items-center justify-between text-xs text-ink/60">
-            <label className="flex items-center gap-2 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={formData.remember}
-                onChange={(e) => setFormData({ ...formData, remember: e.target.checked })}
-                className="rounded border-line text-gold focus:ring-gold"
-              />
-              Remember me
-            </label>
-            <span className="text-emerald-600 font-medium">SSL Encrypted</span>
-          </div>
+            <div className="text-center pt-0.5 text-xs text-ink/50">
+              No account yet?{" "}
+              <button
+                type="button"
+                onClick={() => handleSwitchToSignUp(formData.email)}
+                className="text-gold font-bold hover:underline"
+              >
+                Create Account
+              </button>
+            </div>
+          </form>
+        )}
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full py-3.5 rounded-xl bg-ink text-paper font-semibold text-sm hover:bg-black transition-colors flex items-center justify-center gap-2 disabled:opacity-60"
-          >
-            {loading ? (
-              <>
-                <Icon name="spinner" className="w-4 h-4 spin-slow" />
-                <span>{tab === "signin" ? "Authenticating..." : "Creating Account..."}</span>
-              </>
-            ) : (
-              <span>{tab === "signin" ? "Sign In" : "Register Now"}</span>
+        {/* CREATE ACCOUNT TAB */}
+        {tab === "signup" && (
+          <form onSubmit={handleSubmit} className="p-5 space-y-3.5">
+            {errorState && errorState.type === "ALREADY_EXISTS" && (
+              <div className="p-3 rounded-xl bg-amber-50 border border-amber-300 text-amber-950 text-xs rise-in">
+                <div className="flex items-center justify-between gap-2">
+                  <span>Account already exists.</span>
+                  <button
+                    type="button"
+                    onClick={() => handleSwitchToSignIn(formData.email)}
+                    className="font-bold text-gold hover:underline underline-offset-2 flex-shrink-0"
+                  >
+                    Sign In instead
+                  </button>
+                </div>
+              </div>
             )}
-          </button>
 
-          <div className="relative text-center my-3">
-            <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-line"></div></div>
-            <span className="relative px-3 bg-paper text-[11px] text-ink/40 uppercase tracking-wider">Quick Access</span>
-          </div>
+            {errorState && errorState.type === "VALIDATION" && (
+              <div className="p-2.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-medium flex items-center gap-2">
+                <Icon name="alert" className="w-4 h-4 flex-shrink-0" />
+                <span>{errorState.message}</span>
+              </div>
+            )}
 
-          <button
-            type="button"
-            onClick={fillDemo}
-            className="w-full py-2.5 rounded-xl bg-gold/10 text-gold border border-gold/20 text-xs font-semibold hover:bg-gold/20 transition-colors"
-          >
-            Fill Demo Customer Account
-          </button>
-        </form>
+            <div>
+              <label className="text-xs font-semibold text-ink/80 block mb-1">Full Name</label>
+              <input
+                type="text"
+                placeholder="e.g. John Doe"
+                value={formData.name}
+                onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-line text-sm outline-none focus:border-gold"
+              />
+            </div>
+
+            <div>
+              <label className="text-xs font-semibold text-ink/80 block mb-1">Email or Phone</label>
+              <input
+                type="text"
+                placeholder="Enter email or phone"
+                value={formData.email}
+                onChange={(e) => handleIdentifierChange(e.target.value)}
+                className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-line text-sm outline-none focus:border-gold"
+              />
+            </div>
+
+            <div>
+              <label className="text-xs font-semibold text-ink/80 block mb-1">Create Password</label>
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="At least 6 characters"
+                  value={formData.password}
+                  onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
+                  className="w-full px-3.5 py-2.5 pr-10 rounded-xl bg-white border border-line text-sm outline-none focus:border-gold"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-ink/40 hover:text-ink transition-colors p-1"
+                  title={showPassword ? "Hide password" : "Show password"}
+                >
+                  <Icon name={showPassword ? "eyeOff" : "eye"} className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 pt-1">
+              <button
+                type="button"
+                onClick={onClose}
+                className="w-1/3 py-2.5 rounded-xl border border-line hover:border-ink/40 text-ink/70 hover:text-ink font-medium text-sm transition-colors text-center"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                disabled={loading}
+                className="flex-1 py-2.5 rounded-xl bg-ink text-paper font-semibold text-sm hover:bg-black transition-colors flex items-center justify-center gap-2 disabled:opacity-60 shadow-sm"
+              >
+                {loading ? (
+                  <>
+                    <Icon name="spinner" className="w-4 h-4 spin-slow" />
+                    <span>Creating Account...</span>
+                  </>
+                ) : (
+                  <span>Create Account</span>
+                )}
+              </button>
+            </div>
+
+            <div className="text-center pt-0.5 text-xs text-ink/50">
+              Already have an account?{" "}
+              <button
+                type="button"
+                onClick={() => handleSwitchToSignIn(formData.email)}
+                className="text-gold font-bold hover:underline"
+              >
+                Sign In
+              </button>
+            </div>
+          </form>
+        )}
+
       </div>
     </div>
   );
@@ -763,22 +1124,14 @@ const Nav = ({ user, onOpenAuth, onLogout, savedCount }) => {
             </div>
           ) : (
             <button
-              onClick={onOpenAuth}
-              className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-line bg-white text-sm font-medium text-ink hover:border-ink/40 transition-colors"
+              onClick={() => onOpenAuth("signin")}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-line bg-white/90 hover:bg-white text-ink text-xs font-semibold shadow-xs hover:border-ink/40 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              title="Sign in to your account"
             >
-              <Icon name="user" className="w-4 h-4 text-ink/60" />
-              Sign In
+              <Icon name="user" className="w-3.5 h-3.5 text-gold" />
+              <span>Sign In</span>
             </button>
           )}
-
-          <a
-            href={waLink(`Hi ${BUSINESS.name}, I'd like to ask about a product.`)}
-            target="_blank" rel="noopener"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-ink text-paper text-sm font-medium hover:bg-black transition-colors"
-          >
-            <Icon name="whatsapp" className="w-4 h-4" />
-            WhatsApp Order
-          </a>
         </div>
 
         <button onClick={() => setOpen(!open)} className="md:hidden p-2 -mr-2 text-ink">
@@ -796,22 +1149,44 @@ const Nav = ({ user, onOpenAuth, onLogout, savedCount }) => {
           
           <div className="pt-2 flex flex-col gap-2">
             {user ? (
-              <div className="flex items-center justify-between py-2 px-3 rounded-xl bg-white border border-line">
-                <div className="flex items-center gap-2">
-                  <span className="w-7 h-7 rounded-full bg-gold text-white flex items-center justify-center text-xs font-bold">
+              <div className="flex items-center justify-between py-2.5 px-3.5 rounded-xl bg-white border border-line shadow-sm">
+                <div className="flex items-center gap-2.5">
+                  <span className="w-8 h-8 rounded-full bg-gold text-white flex items-center justify-center text-xs font-bold">
                     {user.avatar || user.name[0]}
                   </span>
-                  <span className="text-sm font-semibold">{user.name}</span>
+                  <div>
+                    <span className="text-sm font-semibold block leading-tight">{user.name}</span>
+                    <span className="text-[10px] text-ink/50">{user.email || user.phone}</span>
+                  </div>
                 </div>
-                <button onClick={onLogout} className="text-xs text-red-600 font-medium">Sign Out</button>
+                <button onClick={onLogout} className="text-xs text-red-600 font-semibold px-2 py-1 rounded-lg hover:bg-red-50">
+                  Sign Out
+                </button>
               </div>
             ) : (
-              <button
-                onClick={() => { setOpen(false); onOpenAuth(); }}
-                className="w-full py-2.5 rounded-xl border border-line bg-white text-sm font-semibold"
-              >
-                Sign In / Register
-              </button>
+              <div className="p-3 bg-amber-50/80 border border-amber-200/90 rounded-2xl mb-1 text-xs">
+                <div className="flex items-center gap-1.5 font-bold text-amber-900 mb-0.5">
+                  <Icon name="alertCircle" className="w-3.5 h-3.5 text-amber-600" />
+                  <span>You haven't logged in yet</span>
+                </div>
+                <p className="text-amber-800/80 text-[11px] mb-2.5">
+                  Create an account or sign in to save your favorite phones and track orders.
+                </p>
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    onClick={() => { setOpen(false); onOpenAuth("signin"); }}
+                    className="py-2 px-3 rounded-xl border border-line bg-white text-xs font-bold text-center text-ink"
+                  >
+                    Sign In
+                  </button>
+                  <button
+                    onClick={() => { setOpen(false); onOpenAuth("signup"); }}
+                    className="py-2 px-3 rounded-xl bg-ink text-paper text-xs font-bold text-center shadow-sm"
+                  >
+                    Create Account
+                  </button>
+                </div>
+              </div>
             )}
 
             <a
@@ -1543,8 +1918,10 @@ function App() {
   const [toast, setToast] = useState(null);
   const toastTimer = useRef(null);
 
-  // Authentication State
+  // Smart Authentication State
   const [authModalOpen, setAuthModalOpen] = useState(false);
+  const [authInitialTab, setAuthInitialTab] = useState("signin");
+  const [guestNoticeContext, setGuestNoticeContext] = useState(null);
   const [user, setUser] = useState(null);
 
   // Wishlist / Saved items
@@ -1588,7 +1965,13 @@ function App() {
   const showToast = (msg) => {
     setToast(msg);
     clearTimeout(toastTimer.current);
-    toastTimer.current = setTimeout(() => setToast(null), 3200);
+    toastTimer.current = setTimeout(() => setToast(null), 3600);
+  };
+
+  const handleOpenAuth = (tab = "signin", notice = null) => {
+    setAuthInitialTab(tab);
+    setGuestNoticeContext(notice);
+    setAuthModalOpen(true);
   };
 
   const handleToggleSave = (productId) => {
@@ -1598,7 +1981,11 @@ function App() {
       showToast("Removed from saved list");
     } else {
       newSaved = [...savedIds, productId];
-      showToast("Saved to your favorites!");
+      if (!user) {
+        showToast("Saved to favorites! You haven't logged in yet — create an account to sync across devices.");
+      } else {
+        showToast("Saved to your favorites!");
+      }
     }
     setSavedIds(newSaved);
     localStorage.setItem("core_wishlist", JSON.stringify(newSaved));
@@ -1607,7 +1994,7 @@ function App() {
   const handleLogout = () => {
     localStorage.removeItem("core_auth_user");
     setUser(null);
-    showToast("You have been signed out.");
+    showToast("You have been signed out. You are now browsing as a guest.");
   };
 
   const handleOrder = (product) => {
@@ -1622,9 +2009,10 @@ function App() {
     <div>
       {initialLoading && <AppLoader progress={loadProgress} status={loadStatus} />}
 
+
       <Nav
         user={user}
-        onOpenAuth={() => setAuthModalOpen(true)}
+        onOpenAuth={(tab) => handleOpenAuth(tab || "signin")}
         onLogout={handleLogout}
         savedCount={savedIds.length}
       />
@@ -1657,6 +2045,8 @@ function App() {
         onClose={() => setAuthModalOpen(false)}
         onLoginSuccess={(u) => setUser(u)}
         showToast={showToast}
+        initialTab={authInitialTab}
+        guestNotice={guestNoticeContext}
       />
 
       <Toast msg={toast} />
